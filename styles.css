@@ -19,8 +19,8 @@
   --green:#6fdca4;
   --radius:18px;
   --content-max:1280px;
-  --hero-text-max:1340px;
-  --visual-max:1480px;
+  --hero-text-max:1320px;
+  --visual-max:1360px;
   --page-gutter:clamp(20px,5vw,96px);
 }
 *{box-sizing:border-box}
@@ -141,7 +141,7 @@ button{color:inherit}
 
 /* Product shot */
 .product-shot{
-  margin:70px auto 0;
+  margin:62px auto 0;
   width:100%;
   max-width:var(--visual-max);
   border:1px solid rgba(255,255,255,.14);

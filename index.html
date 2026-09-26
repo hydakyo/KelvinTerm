@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, serial console, SFTP and direct-link network tools in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.2-clean1" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.2-clean2" />
 </head>
 <body>
   <header class="nav">
@@ -185,54 +185,93 @@
         </p>
       </div>
 
-      <div class="feature-layout">
-        <article class="feature feature-large">
-          <div class="feature-icon rose">↕</div>
-          <div class="feature-copy">
-            <h3>Console without the friction.</h3>
+      <div class="feature-stack">
+        <article class="feature-showcase">
+          <div class="feature-showcase-copy">
+            <div class="feature-icon rose">↕</div>
+            <div class="feature-number">01 / CONSOLE</div>
+            <h3>From cable to console in seconds.</h3>
             <p>
-              Plug in a USB console cable and KelvinTerm can discover the port automatically.
-              Need more control? DTR, RTS and BREAK are built in.
+              KelvinTerm watches for USB serial devices and can open the right port automatically.
+              When you need lower-level control, DTR, RTS and BREAK are already there.
             </p>
+            <div class="feature-points">
+              <span>Automatic USB discovery</span>
+              <span>Manual serial configuration</span>
+              <span>DTR · RTS · BREAK</span>
+            </div>
           </div>
-          <div class="console-visual">
-            <div class="console-header"><span>Quick Console</span><small>Watching for devices</small></div>
-            <div class="console-cable">━▰</div>
-            <div class="console-message"><b>Plug in your console cable</b><span>Auto-discovery is ready.</span></div>
+
+          <div class="feature-demo console-demo">
+            <div class="demo-toolbar">
+              <span>Quick Console</span>
+              <small>Watching for devices</small>
+            </div>
+            <div class="console-demo-body">
+              <div class="console-plug">━▰</div>
+              <b>Plug in your console cable</b>
+              <p>KelvinTerm will open the right port automatically.</p>
+              <code>Watching for USB console devices</code>
+            </div>
+            <div class="demo-footer">
+              <span>Auto-connect &nbsp;◉</span>
+              <code>9,600 BAUD · 8N1</code>
+              <b>Configure manually</b>
+            </div>
           </div>
         </article>
 
-        <article class="feature">
-          <div class="feature-icon">◎</div>
-          <h3>SSH sessions that stay organised.</h3>
-          <p>Saved profiles, favorites, recent sessions, Quick Open, Keychain passwords and native OpenSSH behaviour.</p>
-        </article>
+        <div class="feature-essentials">
+          <article>
+            <div class="feature-icon">◎</div>
+            <h3>SSH that stays organised.</h3>
+            <p>Saved sessions, favorites, recent history, Quick Open, Keychain passwords and system OpenSSH.</p>
+          </article>
+          <article>
+            <div class="feature-icon">▤</div>
+            <h3>SFTP beside the session.</h3>
+            <p>Browse remote files and transfer folders with progress, cancel and resume without changing tools.</p>
+          </article>
+          <article>
+            <div class="feature-icon">ϟ</div>
+            <h3>Commands worth keeping.</h3>
+            <p>Save frequent commands and resolve <code>{parameter}</code> values before sending them to a live device.</p>
+          </article>
+        </div>
 
-        <article class="feature">
-          <div class="feature-icon">▤</div>
-          <h3>SFTP beside the session.</h3>
-          <p>Browse remote files and move files or folders with progress, cancel and resume — without leaving the workspace.</p>
-        </article>
+        <article class="feature-showcase reverse">
+          <div class="feature-demo dhcp-demo">
+            <div class="demo-toolbar">
+              <span>DHCP Server</span>
+              <small class="ready-dot">● Ready</small>
+            </div>
+            <div class="dhcp-demo-body">
+              <label>Interface</label>
+              <div class="demo-field split"><span>Ethernet Adapter</span><code>en3 ↕</code></div>
+              <div class="demo-pool">
+                <div><label>Pool start</label><div class="demo-field">192.0.2.100</div></div>
+                <div><label>Pool end</label><div class="demo-field">192.0.2.200</div></div>
+              </div>
+              <label>Gateway <small>optional</small></label>
+              <div class="demo-field muted">192.0.2.1</div>
+              <button>Start DHCP</button>
+              <p>Serves this adapter only. Designed for direct, isolated links.</p>
+            </div>
+          </div>
 
-        <article class="feature">
-          <div class="feature-icon">ϟ</div>
-          <h3>Commands you can reuse.</h3>
-          <p>Keep frequently used snippets close and resolve <code>{parameter}</code> placeholders before sending them.</p>
-        </article>
-
-        <article class="feature feature-wide">
-          <div class="feature-icon">⇄</div>
-          <div>
-            <h3>Direct-link DHCP when the device has no address yet.</h3>
+          <div class="feature-showcase-copy">
+            <div class="feature-icon rose">⇄</div>
+            <div class="feature-number">02 / DIRECT-LINK DHCP</div>
+            <h3>When the device doesn’t have an address yet.</h3>
             <p>
-              Pick a physical Ethernet adapter, define a small pool, and serve only that isolated link.
-              The privileged helper is approved once and stays out of the way afterwards.
+              Connect a physical Ethernet adapter, define a small pool and serve only that isolated link.
+              It is built for staging, bench work and first-touch configuration — not as a general LAN DHCP server.
             </p>
-          </div>
-          <div class="dhcp-mini">
-            <div><small>Interface</small><b>Ethernet Adapter</b><em>en3</em></div>
-            <div class="pool"><span><small>Pool start</small><b>192.0.2.100</b></span><span><small>Pool end</small><b>192.0.2.200</b></span></div>
-            <button>Start DHCP</button>
+            <div class="feature-points">
+              <span>Scoped to one physical adapter</span>
+              <span>One-time privileged helper approval</span>
+              <span>Lease visibility inside KelvinTerm</span>
+            </div>
           </div>
         </article>
       </div>
@@ -347,6 +386,6 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.2-clean1"></script>
+  <script src="./app.js?v=0.4.2-clean2"></script>
 </body>
 </html>

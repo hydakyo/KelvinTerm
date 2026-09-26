@@ -326,7 +326,16 @@ button{color:inherit}
 .section-copy h2{
   max-width:1200px
 }
-.section-copy>p,.workflow-copy>p,.terminal-story-copy>p,.download-card>p{
+.section-copy>p{
+  width:100%;
+  max-width:none;
+  margin:0;
+  color:var(--text-2);
+  font-size:clamp(1rem,calc(.25vw + .95rem),1.125rem);
+  line-height:1.68;
+  text-wrap:pretty
+}
+.workflow-copy>p,.terminal-story-copy>p,.download-card>p{
   max-width:68ch;
   margin:0;
   color:var(--text-2);

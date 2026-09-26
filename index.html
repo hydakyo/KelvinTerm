@@ -53,8 +53,8 @@
     <section id="workspace" class="workspace-showcase shell">
       <div class="showcase-head">
         <div>
-          <span class="section-kicker">The actual KelvinTerm workspace</span>
-          <h2>The website now follows the app, not a generic terminal mockup.</h2>
+          <span class="section-kicker">KelvinTerm 0.4.2 interface</span>
+          <h2>A product page built around the interface people actually use.</h2>
         </div>
         <div class="appearance-control" aria-label="Preview appearance">
           <button class="appearance-btn is-active" data-theme="dark">Dark</button>
@@ -90,12 +90,13 @@
 
             <div class="kt-saved-head"><span>SAVED SESSIONS</span><span>⇅ &nbsp;＋</span></div>
             <div class="kt-saved-row">
-              <span class="cable">↕</span>
-              <div><b>Lab Console</b><small>cu.Lab Console · 9600 baud</small></div>
+              <span class="session-tile">↕</span>
+              <div><b>Lab Console</b><small>/dev/cu.usbserial-DEMO · 9600 baud</small></div>
             </div>
 
             <div class="kt-sidebar-bottom">
               <div class="kt-divider"></div>
+              <div class="kt-tools-label">TOOLS</div>
               <div class="kt-bottom-action accent"><span>↕</span><b>Quick Console</b></div>
               <div class="kt-bottom-action"><span>‹/›</span><b>Local Terminal</b></div>
               <div class="kt-bottom-action"><span>◎</span><b>DHCP Server</b></div>
@@ -111,8 +112,8 @@
                 <div><strong>Workspace</strong><small>1 saved session · 0 console ports detected</small></div>
               </div>
               <div class="kt-toolbar-actions">
-                <span>ϟ Commands</span>
-                <span>⌕ Quick Open</span>
+                <div class="toolbar-utilities"><span>ϟ Commands</span><span>⌕ Quick Open</span></div>
+                <i class="toolbar-rule"></i>
                 <button class="console-btn">↕&nbsp; Console</button>
                 <button class="new-btn">＋&nbsp; New Session</button>
               </div>
@@ -142,7 +143,7 @@
                 <div class="kt-recent-head"><b>Recent sessions</b><span>1 saved</span></div>
                 <div class="kt-recent-card">
                   <span>↕</span>
-                  <div><b>Lab Console</b><small>cu.Lab Console · 9600 baud</small></div>
+                  <div><b>Lab Console</b><small>/dev/cu.usbserial-DEMO · 9600 baud</small></div>
                   <time>2d ago</time><em>›</em>
                 </div>
 
@@ -158,7 +159,93 @@
         </div>
       </div>
 
-      <p class="showcase-note">The preview above reproduces KelvinTerm’s real workspace structure, spacing, light/dark palette and Rose accent from the app source.</p>
+      <p class="showcase-note">Recreated from KelvinTerm’s current UI and source. Demo names, addresses and device identifiers are intentionally synthetic.</p>
+    </section>
+
+    <section class="section shell interface-tour" id="interface">
+      <div class="section-heading">
+        <span class="section-kicker">Current product surfaces</span>
+        <h2>Not just a landing-page mockup.</h2>
+        <p>The public site mirrors the screens that ship in KelvinTerm: the working terminal, automatic console discovery, connection editor and DHCP utility.</p>
+      </div>
+
+      <div class="product-surface terminal-surface">
+        <div class="surface-title"><span>Local Terminal</span><small>real workspace structure</small></div>
+        <div class="mini-app-shell">
+          <div class="mini-topbar">
+            <div><i></i><strong>Local Terminal</strong><b>LOCAL</b><small>Local shell</small></div>
+            <div class="mini-actions"><span>ϟ Commands</span><span>⌕ Quick Open</span><button>↕ Console</button><button class="rose">＋ New Session</button></div>
+          </div>
+          <div class="mini-tabs"><span class="active">▣&nbsp; Local Terminal &nbsp;×</span><em>＋</em></div>
+          <div class="mini-sessionbar"><span><i></i><b>Connected</b><code>Local shell</code></span><span>⌕ &nbsp;⇩ &nbsp;ϟ Quick Commands⌄ &nbsp; A &nbsp; A &nbsp;↻ &nbsp;×</span></div>
+          <div class="terminal-canvas"><code>demo@mac / % <span class="terminal-cursor">▋</span></code></div>
+          <div class="mini-statusbar"><span>● Connected &nbsp;&nbsp;▣ Local &nbsp;&nbsp;Local Terminal</span><span>121×39 &nbsp;&nbsp; LN 1 &nbsp; COL 22 &nbsp;&nbsp; ● DRACULA &nbsp;&nbsp;13 PT &nbsp;&nbsp;UTF-8</span></div>
+        </div>
+      </div>
+
+      <div class="surface-grid">
+        <div class="product-surface modal-surface">
+          <div class="surface-title"><span>Auto Console</span><small>USB discovery</small></div>
+          <div class="fake-sheet auto-console-sheet">
+            <div class="sheet-head">
+              <span class="sheet-icon amber">↕</span>
+              <div><strong>Auto Console</strong><small>KelvinTerm is watching for USB console cables.</small></div>
+              <b>×</b>
+            </div>
+            <div class="auto-body">
+              <div class="cable-hero">━▰</div>
+              <strong>Plug in your console cable</strong>
+              <p>Connect a USB console cable and KelvinTerm will open the right port automatically.</p>
+              <code>Watching for USB console devices</code>
+            </div>
+            <div class="sheet-footer"><span>Auto-connect &nbsp;◉</span><code>9,600 BAUD · 8N1</code><b>Configure manually</b></div>
+          </div>
+        </div>
+
+        <div class="product-surface modal-surface">
+          <div class="surface-title"><span>New Connection</span><small>SSH · Serial · Local</small></div>
+          <div class="fake-sheet connection-sheet">
+            <div class="sheet-head">
+              <span class="sheet-icon">◎</span>
+              <div><strong>New connection</strong><small>Connect once or save this session for later.</small></div>
+              <b>×</b>
+            </div>
+            <div class="sheet-body compact">
+              <label>CONNECTION TYPE</label>
+              <div class="connection-kinds">
+                <div class="kind active"><span>◎</span><b>SSH</b><small>Secure remote shell over OpenSSH</small></div>
+                <div class="kind"><span>↕</span><b>Serial</b><small>USB console cable at 9600 baud</small></div>
+                <div class="kind"><span>›_</span><b>Local</b><small>Your Mac's login shell</small></div>
+              </div>
+              <div class="form-row"><div><label>HOSTNAME OR IP</label><div class="filled-field">server.example.com</div></div><div class="port"><label>PORT</label><div class="filled-field">22</div></div></div>
+              <label>USERNAME</label><div class="filled-field">operator</div>
+              <label>PASSWORD</label><div class="filled-field muted">SSH password</div>
+              <label>PRIVATE KEY</label><div class="form-row key-row"><div class="filled-field muted">Use SSH agent</div><button>Browse…</button></div>
+            </div>
+            <div class="sheet-footer connection-footer"><span>Cancel</span><span><button>Save</button><button disabled>Save & Connect</button><button disabled>Connect</button></span></div>
+          </div>
+        </div>
+
+        <div class="product-surface modal-surface dhcp-surface">
+          <div class="surface-title"><span>DHCP Server</span><small>direct / isolated links</small></div>
+          <div class="fake-sheet dhcp-sheet">
+            <div class="sheet-head">
+              <span class="sheet-icon">◎</span>
+              <div><strong>DHCP Server</strong></div>
+              <span class="ready">● Ready</span><b>×</b>
+            </div>
+            <div class="sheet-body">
+              <label>Server</label>
+              <div class="server-card"><i></i><div><b>Stopped</b><small>Not serving any addresses.</small></div></div>
+              <label>Interface</label><div class="filled-field split"><span>Ethernet Adapter</span><code>en3 ↕</code></div>
+              <div class="form-row"><div><label>Pool start</label><div class="filled-field">192.0.2.100</div></div><div><label>Pool end</label><div class="filled-field">192.0.2.200</div></div></div>
+              <label>Gateway <span>optional</span></label><div class="filled-field muted">192.0.2.1</div>
+              <button class="dhcp-action">Start DHCP</button>
+              <p class="sheet-note">Serves this adapter only. Designed for direct, isolated links.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="features" class="section shell">
@@ -227,16 +314,18 @@
 
         <div class="dhcp-ui">
           <div class="dhcp-ui-head"><div><span>◎</span><strong>DHCP Server</strong></div><small>● Ready</small></div>
-          <label>Network adapter</label>
-          <div class="input-like">USB 10/100/1000 LAN <span>en8</span></div>
+          <label>Server</label>
+          <div class="dhcp-server-status"><i></i><div><b>Stopped</b><small>Not serving any addresses.</small></div></div>
+          <label>Interface</label>
+          <div class="input-like"><b>Ethernet Adapter</b><span>en3 ↕</span></div>
           <div class="two-col">
-            <div><label>Pool start</label><div class="input-like">192.168.50.100</div></div>
-            <div><label>Pool end</label><div class="input-like">192.168.50.200</div></div>
+            <div><label>Pool start</label><div class="input-like">192.0.2.100</div></div>
+            <div><label>Pool end</label><div class="input-like">192.0.2.200</div></div>
           </div>
           <label>Gateway <small>optional</small></label>
-          <div class="input-like">192.168.50.1</div>
+          <div class="input-like muted">192.0.2.1</div>
           <button>Start DHCP</button>
-          <p>Use only on a direct or isolated network.</p>
+          <p>Serves this adapter only. Designed for direct, isolated links.</p>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 const repo = "hydakyo/KelvinTerm";
-const fallback = "https://github.com/" + repo + "/releases/latest";
+const fallbackDmg = "https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.2/KelvinTerm-0.4.2.dmg";
 
 async function hydrateLatestRelease() {
   try {
@@ -13,8 +13,12 @@ async function hydrateLatestRelease() {
       ? release.assets.find(asset => /\.dmg$/i.test(asset.name || ""))
       : null;
 
-    const href = dmg?.browser_download_url || release.html_url || fallback;
-    document.querySelectorAll(".download-link").forEach(link => link.href = href);
+    const href = dmg?.browser_download_url || fallbackDmg;
+    document.querySelectorAll(".download-link").forEach(link => {
+      link.href = href;
+      link.removeAttribute("target");
+      link.removeAttribute("rel");
+    });
 
     const label = release.tag_name || release.name || "Latest release";
     document.querySelectorAll(".release-version").forEach(node => node.textContent = label);
@@ -30,7 +34,11 @@ async function hydrateLatestRelease() {
       detail.textContent = bits.join(" · ");
     }
   } catch {
-    document.querySelectorAll(".download-link").forEach(link => link.href = fallback);
+    document.querySelectorAll(".download-link").forEach(link => {
+      link.href = fallbackDmg;
+      link.removeAttribute("target");
+      link.removeAttribute("rel");
+    });
   }
 }
 

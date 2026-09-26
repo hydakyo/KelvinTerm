@@ -3,180 +3,240 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a0d0f" />
-  <meta name="description" content="KelvinTerm is a native macOS terminal workspace for SSH, serial console, SFTP, port forwarding, local shell and on-demand DHCP." />
-  <meta property="og:title" content="KelvinTerm — One workspace. Every console." />
-  <meta property="og:description" content="A native macOS terminal workspace built for network engineers." />
+  <meta name="theme-color" content="#1e1e1f" />
+  <meta name="description" content="KelvinTerm is a native macOS terminal workspace for SSH, serial console, SFTP, local shell, port forwarding and on-demand DHCP." />
+  <meta property="og:title" content="KelvinTerm — Native macOS terminal workspace" />
+  <meta property="og:description" content="SSH, serial console, SFTP and network utilities in one focused workspace for network engineers." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — Native macOS terminal workspace</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="nav-wrap">
-    <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="KelvinTerm home">
-        <span class="brand-mark">&gt;_</span>
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-brand" href="#top" aria-label="KelvinTerm home">
+        <span class="site-icon">›_</span>
         <span>KelvinTerm</span>
       </a>
-      <div class="nav-links">
+      <nav class="site-links" aria-label="Website navigation">
+        <a href="#workspace">Workspace</a>
         <a href="#features">Features</a>
-        <a href="#network-tools">Network tools</a>
+        <a href="#network">Network tools</a>
         <a href="#privacy">Privacy</a>
         <a href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Releases</a>
-      </div>
-      <a class="button button-small download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">
-        Download
-      </a>
-    </nav>
+      </nav>
+      <a class="site-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">Download</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero shell">
-      <div class="eyebrow"><span class="dot"></span> Native on macOS · Built for network engineers</div>
-      <h1>One workspace.<br /><span>Every console.</span></h1>
-      <p class="hero-copy">
-        SSH, serial console, SFTP, local shell, port forwarding and on-demand DHCP —
-        in one focused native macOS workspace.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">
-          <span>Download for macOS</span>
-          <span class="button-meta release-version">Latest release</span>
-        </a>
-        <a class="button button-ghost" href="#features">Explore features</a>
-      </div>
-      <div class="requirements">Requires macOS 14 Sonoma or later.</div>
-
-      <div class="app-frame" aria-label="KelvinTerm product preview">
-        <div class="titlebar">
-          <div class="traffic-lights"><i></i><i></i><i></i></div>
-          <div class="title">KelvinTerm</div>
-          <div class="title-actions">⌘K</div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Native macOS workspace for network engineers</div>
+        <h1>SSH, serial and network tools.<br><em>In one workspace.</em></h1>
+        <p>KelvinTerm brings saved SSH sessions, USB serial console, SFTP, local shell, port forwarding and direct-link DHCP into a focused native macOS app.</p>
+        <div class="hero-actions">
+          <a class="primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">
+            <span>Download for macOS</span>
+            <small class="release-version">Latest release</small>
+          </a>
+          <a class="secondary" href="#workspace">See the workspace</a>
         </div>
-        <div class="workspace">
-          <aside class="sidebar">
-            <div class="sidebar-heading">WORKSPACE</div>
-            <div class="sidebar-item active"><span>⌂</span><b>All sessions</b><em>8</em></div>
-            <div class="sidebar-item"><span>◷</span><b>Recent</b><em>3</em></div>
-            <div class="sidebar-item"><span>★</span><b>Favorites</b><em>4</em></div>
-            <div class="sidebar-heading">CONNECTIONS</div>
-            <div class="sidebar-item"><span>⌁</span><b>SSH</b><em>5</em></div>
-            <div class="sidebar-item"><span>⌘</span><b>Console</b><em>3</em></div>
-            <div class="sidebar-spacer"></div>
-            <div class="sidebar-item subtle"><span>›_</span><b>Quick Console</b></div>
-            <div class="sidebar-item subtle"><span>⌨</span><b>Local Terminal</b></div>
-            <div class="sidebar-item subtle"><span>⇄</span><b>DHCP Server</b></div>
+        <div class="hero-meta">
+          <span>macOS 14+</span>
+          <span>Native Swift</span>
+          <span>Local-first</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="workspace" class="workspace-showcase shell">
+      <div class="showcase-head">
+        <div>
+          <span class="section-kicker">The actual KelvinTerm workspace</span>
+          <h2>The website now follows the app, not a generic terminal mockup.</h2>
+        </div>
+        <div class="appearance-control" aria-label="Preview appearance">
+          <button class="appearance-btn is-active" data-theme="dark">Dark</button>
+          <button class="appearance-btn" data-theme="light">Light</button>
+        </div>
+      </div>
+
+      <div class="app-preview" data-preview-theme="dark">
+        <div class="mac-window">
+          <aside class="kt-sidebar">
+            <div class="traffic">
+              <i class="close"></i><i class="minimize"></i><i class="zoom"></i>
+            </div>
+
+            <div class="kt-sidebar-header">
+              <div class="kt-brand-row">
+                <span class="kt-app-icon">›_</span>
+                <strong>KelvinTerm</strong>
+                <span class="kt-spacer"></span>
+                <span class="kt-theme-switch"><b>☀</b><b>◐</b></span>
+                <span class="kt-command-icon">ϟ</span>
+              </div>
+            </div>
+
+            <div class="kt-search"><span>⌕</span><span>Search sessions</span><kbd>⌘⇧F</kbd></div>
+
+            <div class="kt-section-label">WORKSPACE</div>
+            <div class="kt-side-row selected"><span>▣</span><b>All sessions</b><em>1</em></div>
+            <div class="kt-side-row"><span>◷</span><b>Recent</b><em>1</em></div>
+            <div class="kt-side-row"><span>☆</span><b>Favorites</b></div>
+            <div class="kt-side-row"><span>◎</span><b>SSH</b></div>
+            <div class="kt-side-row"><span>↕</span><b>Console</b><em>1</em></div>
+
+            <div class="kt-saved-head"><span>SAVED SESSIONS</span><span>⇅ &nbsp;＋</span></div>
+            <div class="kt-saved-row">
+              <span class="cable">↕</span>
+              <div><b>usbserial-A9NFYP6T</b><small>cu.usbserial-A9NFYP6T · 9600 baud</small></div>
+            </div>
+
+            <div class="kt-sidebar-bottom">
+              <div class="kt-divider"></div>
+              <div class="kt-bottom-action accent"><span>↕</span><b>Quick Console</b></div>
+              <div class="kt-bottom-action"><span>‹/›</span><b>Local Terminal</b></div>
+              <div class="kt-bottom-action"><span>◎</span><b>DHCP Server</b></div>
+              <div class="kt-auto-row"><span>Auto-connect on plug-in</span><span class="toggle"></span></div>
+              <div class="kt-waiting"><i></i>Waiting for a console cable</div>
+            </div>
           </aside>
 
-          <section class="terminal-area">
-            <div class="tabs">
-              <div class="tab active"><span class="status-dot green"></span>core-sw-01 <b>×</b></div>
-              <div class="tab"><span class="status-dot blue"></span>fw-edge-01 <b>×</b></div>
-              <div class="tab"><span class="status-dot amber"></span>usb-console <b>×</b></div>
-              <div class="tab-add">+</div>
+          <section class="kt-main">
+            <div class="kt-topbar">
+              <div class="kt-workspace-title">
+                <i></i>
+                <div><strong>Workspace</strong><small>1 saved session · 0 console ports detected</small></div>
+              </div>
+              <div class="kt-toolbar-actions">
+                <span>ϟ Commands</span>
+                <span>⌕ Quick Open</span>
+                <button class="console-btn">↕&nbsp; Console</button>
+                <button class="new-btn">＋&nbsp; New Session</button>
+              </div>
             </div>
-            <div class="toolbar">
-              <span>SSH · admin@10.20.0.11</span>
-              <div><button>⇄</button><button>▣</button><button>⌕</button></div>
-            </div>
-            <div class="terminal">
-              <div><span class="prompt">admin@core-sw-01</span><span class="dim"> ~ </span><span class="cmd">show interfaces status</span></div>
-              <br />
-              <div class="output">Port      Name               Status       Vlan       Duplex  Speed</div>
-              <div class="output">Gi1/0/1   uplink-fw          connected    trunk      a-full  a-1G</div>
-              <div class="output">Gi1/0/2   access-sw-02       connected    trunk      a-full  a-1G</div>
-              <div class="output">Gi1/0/3   ap-floor-03        connected    120        a-full  a-1G</div>
-              <div class="output muted">Gi1/0/4                      notconnect   120        auto    auto</div>
-              <br />
-              <div><span class="prompt">admin@core-sw-01</span><span class="dim"> ~ </span><span class="cursor">▋</span></div>
-            </div>
-            <div class="statusbar">
-              <span>Kelvin</span><span>13 pt</span><span>80 × 24</span><span>SSH connected</span>
+
+            <div class="kt-overview">
+              <div class="kt-overview-inner">
+                <h3>Connections</h3>
+                <p>Open a saved session or start a new connection.</p>
+
+                <div class="kt-subtitle">New connection</div>
+                <div class="kt-connect-grid">
+                  <div class="kt-connect-card">
+                    <span class="icon">◎</span>
+                    <div><b>SSH</b><small>Connect to a host</small></div><em>›</em>
+                  </div>
+                  <div class="kt-connect-card">
+                    <span class="icon">↕</span>
+                    <div><b>Console</b><small>Find a USB cable</small></div><em>›</em>
+                  </div>
+                  <div class="kt-connect-card">
+                    <span class="icon">›_</span>
+                    <div><b>Local terminal</b><small>Open a shell</small></div><em>›</em>
+                  </div>
+                </div>
+
+                <div class="kt-recent-head"><b>Recent sessions</b><span>1 saved</span></div>
+                <div class="kt-recent-card">
+                  <span>↕</span>
+                  <div><b>usbserial-A9NFYP6T</b><small>cu.usbserial-A9NFYP6T · 9600 baud</small></div>
+                  <time>2d ago</time><em>›</em>
+                </div>
+
+                <div class="kt-shortcuts">
+                  <span><kbd>⌘N</kbd> New session</span>
+                  <span><kbd>⌘T</kbd> Local terminal</span>
+                  <span><kbd>⇧⌘C</kbd> Find console</span>
+                  <span><kbd>⌘⇧O</kbd> Quick open</span>
+                </div>
+              </div>
             </div>
           </section>
         </div>
       </div>
-    </section>
 
-    <section class="strip">
-      <div class="shell strip-grid">
-        <div><strong>SSH</strong><span>Saved sessions & Keychain</span></div>
-        <div><strong>Serial</strong><span>Automatic USB discovery</span></div>
-        <div><strong>SFTP</strong><span>Browse, transfer & resume</span></div>
-        <div><strong>DHCP</strong><span>Direct-link provisioning</span></div>
-      </div>
+      <p class="showcase-note">The preview above reproduces KelvinTerm’s real workspace structure, spacing, light/dark palette and Rose accent from the app source.</p>
     </section>
 
     <section id="features" class="section shell">
       <div class="section-heading">
-        <div class="kicker">Terminal workspace</div>
-        <h2>Everything you need between the rack and the shell.</h2>
-        <p>KelvinTerm consolidates the daily tools of infrastructure work without turning your Mac into a toolbox of disconnected utilities.</p>
+        <span class="section-kicker">Real product capabilities</span>
+        <h2>Built around the workflows KelvinTerm already supports.</h2>
+        <p>No invented AI layer, no fake cloud service and no generic “developer terminal” positioning. These are the capabilities in the current app.</p>
       </div>
+
       <div class="feature-grid">
-        <article class="feature-card large">
-          <div class="feature-icon">⌁</div>
-          <h3>SSH sessions that stay organised</h3>
-          <p>Saved connections, favorites, recent sessions, fuzzy Quick Open, tab restore, tab rename and local port forwarding. Passwords stay in macOS Keychain.</p>
-          <div class="mini-terminal">
-            <div>$ ssh admin@edge-fw</div>
-            <div class="mini-success">Connected · host key verified</div>
+        <article class="feature-card wide">
+          <span class="feature-symbol">◎</span>
+          <div>
+            <h3>Saved SSH sessions</h3>
+            <p>Profiles, favorites, recent sessions, fuzzy Quick Open, tab restore, local forwarding and macOS OpenSSH behaviour.</p>
           </div>
+          <div class="ui-chip">Keychain passwords</div>
         </article>
+
         <article class="feature-card">
-          <div class="feature-icon">⌘</div>
-          <h3>Serial console, instantly</h3>
-          <p>Detect USB console cables as they appear, reconnect automatically and control DTR, RTS and BREAK without another app.</p>
+          <span class="feature-symbol">↕</span>
+          <h3>USB serial console</h3>
+          <p>Detect console cables as they appear, reopen attached devices and send DTR, RTS or BREAK when needed.</p>
         </article>
+
         <article class="feature-card">
-          <div class="feature-icon">▣</div>
-          <h3>SFTP beside your terminal</h3>
-          <p>Browse remote files from the active SSH session. Transfer files or folders with progress, cancel and resume.</p>
+          <span class="feature-symbol">▤</span>
+          <h3>SFTP alongside SSH</h3>
+          <p>Browse remote folders and move files or whole folder trees with progress, cancel and resume.</p>
         </article>
+
         <article class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Reusable command library</h3>
-          <p>Store commands, scope them to sessions and use <code>{parameter}</code> placeholders. Review before sending to live equipment.</p>
+          <span class="feature-symbol">ϟ</span>
+          <h3>Reusable commands</h3>
+          <p>Store snippets, scope them to sessions and resolve <code>{parameter}</code> placeholders before sending.</p>
         </article>
-        <article class="feature-card large visual-card">
-          <div class="feature-icon">◎</div>
-          <h3>A workspace that remembers</h3>
-          <p>Restore previous tabs, spot background activity, search full scrollback, record ANSI output and export readable transcripts.</p>
-          <div class="activity-row">
-            <span><i class="status-dot green"></i> SSH connected</span>
-            <span><i class="status-dot amber"></i> Background output</span>
-            <span><i class="status-dot red"></i> Recording</span>
+
+        <article class="feature-card wide">
+          <span class="feature-symbol">▣</span>
+          <div>
+            <h3>Workspace state that survives restarts</h3>
+            <p>Reopen previous tabs, rename and reorder them, spot background output, search scrollback and export transcripts.</p>
+          </div>
+          <div class="status-cluster">
+            <span><i class="green"></i>Connected</span>
+            <span><i class="amber"></i>Output</span>
+            <span><i class="red"></i>REC</span>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="network-tools" class="section shell">
-      <div class="network-panel">
+    <section id="network" class="section shell">
+      <div class="network-grid">
         <div class="network-copy">
-          <div class="kicker">Built for the bench</div>
-          <h2>Network utilities where you actually need them.</h2>
-          <p>Plug a device directly into your Mac, start a scoped DHCP server, connect over serial, then SSH once the device is reachable — all from the same workspace.</p>
-          <ul>
-            <li><span>01</span> Pick a physical USB or Thunderbolt Ethernet adapter.</li>
-            <li><span>02</span> Define a DHCP pool for the isolated link.</li>
-            <li><span>03</span> Start once; KelvinTerm handles the privileged helper.</li>
-            <li><span>04</span> See active leases and continue directly into SSH.</li>
-          </ul>
+          <span class="section-kicker">Direct-link networking</span>
+          <h2>Console the device, give it an address, then SSH into it.</h2>
+          <p>KelvinTerm’s DHCP helper is designed for a physical USB or Thunderbolt Ethernet adapter on a direct or isolated link.</p>
+          <ol>
+            <li><b>1</b><span>Select the physical adapter.</span></li>
+            <li><b>2</b><span>Choose the DHCP pool and optional gateway.</span></li>
+            <li><b>3</b><span>Install the privileged helper once with administrator approval.</span></li>
+            <li><b>4</b><span>Later starts are silent; active leases appear in KelvinTerm.</span></li>
+          </ol>
         </div>
-        <div class="dhcp-card">
-          <div class="dhcp-title"><span>⇄</span> DHCP Server <b>● Ready</b></div>
-          <label>Interface</label>
-          <div class="field">USB 10/100/1000 LAN · en8</div>
-          <div class="field-row">
-            <div><label>Pool start</label><div class="field">192.168.77.10</div></div>
-            <div><label>Pool end</label><div class="field">192.168.77.50</div></div>
+
+        <div class="dhcp-ui">
+          <div class="dhcp-ui-head"><div><span>◎</span><strong>DHCP Server</strong></div><small>● Ready</small></div>
+          <label>Network adapter</label>
+          <div class="input-like">USB 10/100/1000 LAN <span>en8</span></div>
+          <div class="two-col">
+            <div><label>Pool start</label><div class="input-like">192.168.77.10</div></div>
+            <div><label>Pool end</label><div class="input-like">192.168.77.50</div></div>
           </div>
           <label>Gateway <small>optional</small></label>
-          <div class="field">192.168.77.1</div>
-          <button class="fake-button">Start DHCP</button>
-          <div class="dhcp-note">Serves this adapter only. Designed for direct or isolated links.</div>
+          <div class="input-like">192.168.77.1</div>
+          <button>Start DHCP</button>
+          <p>Use only on a direct or isolated network.</p>
         </div>
       </div>
     </section>
@@ -184,37 +244,37 @@
     <section id="privacy" class="section shell">
       <div class="privacy-grid">
         <div>
-          <div class="kicker">Native by design</div>
-          <h2>Your sessions stay on your Mac.</h2>
+          <span class="section-kicker">Native and local-first</span>
+          <h2>KelvinTerm keeps the operational model simple.</h2>
         </div>
-        <div class="privacy-points">
-          <p><strong>Local-first storage.</strong> Session profiles, commands and workspace state live in your user Application Support directory.</p>
-          <p><strong>Keychain for SSH passwords.</strong> Credentials are not written into profile JSON or exports.</p>
-          <p><strong>Native OpenSSH.</strong> KelvinTerm keeps host-key verification, SSH agent and keyboard-interactive behaviour in the macOS OpenSSH stack.</p>
-          <p><strong>No account required.</strong> Download the app and work locally.</p>
+        <div class="privacy-list">
+          <div><b>Local profiles</b><p>Sessions, commands and workspace state live under your user Application Support directory.</p></div>
+          <div><b>macOS Keychain</b><p>Saved SSH passwords are stored in Keychain, not inside profile JSON or exports.</p></div>
+          <div><b>macOS OpenSSH</b><p>SSH agent, host-key checks and keyboard-interactive authentication stay with the system OpenSSH stack.</p></div>
+          <div><b>No account required</b><p>KelvinTerm is a local native app; the current workflow does not depend on a KelvinTerm cloud account.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section shell final-cta">
-      <div class="cta-glow"></div>
-      <div class="kicker">KelvinTerm for macOS</div>
-      <h2>Spend less time switching tools.<br />Stay closer to the network.</h2>
-      <p>Native SSH, serial, SFTP and practical network utilities in one focused workspace.</p>
-      <div class="hero-actions centered">
-        <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">
+    <section class="final-cta shell">
+      <span class="section-kicker">KelvinTerm for macOS</span>
+      <h2>A focused workspace for the network work you already do.</h2>
+      <p>SSH, serial console, SFTP, local shell and direct-link utilities — without leaving KelvinTerm.</p>
+      <div class="hero-actions">
+        <a class="primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest" target="_blank" rel="noreferrer">
           <span>Download for macOS</span>
-          <span class="button-meta release-version">Latest release</span>
+          <small class="release-version">Latest release</small>
         </a>
-        <a class="button button-ghost" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">View releases</a>
+        <a class="secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">View releases</a>
       </div>
+      <div class="release-detail" id="release-detail">Requires macOS 14 Sonoma or later.</div>
     </section>
   </main>
 
   <footer class="footer shell">
-    <div class="brand"><span class="brand-mark">&gt;_</span><span>KelvinTerm</span></div>
-    <div>Native terminal workspace for macOS.</div>
-    <div>© <span id="year"></span> KelvinTerm</div>
+    <div class="site-brand"><span class="site-icon">›_</span><span>KelvinTerm</span></div>
+    <span>Native macOS terminal workspace for network engineers.</span>
+    <span>© <span id="year"></span></span>
   </footer>
 
   <script src="./app.js"></script>

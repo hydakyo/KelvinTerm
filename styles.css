@@ -516,6 +516,17 @@ button{color:inherit}
   font:11px ui-monospace,SFMono-Regular,Menlo,monospace
 }
 
+.tool-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.tool-pair-card{
+  min-height:260px;padding:36px clamp(28px,3vw,44px);
+  border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(145deg,#202223,#1c1e1f)
+}
+.tool-pair-card .feature-number{margin-top:22px}
+.tool-pair-card h3{margin:11px 0 12px;font-size:clamp(1.5rem,1.9vw,2rem);letter-spacing:-.035em}
+.tool-pair-card p{max-width:54ch;margin:0;color:var(--text-3);font-size:13px;line-height:1.7}
+.tool-pair-card>span{display:block;margin-top:22px;color:var(--text-2);font-size:11px}
+
 .dhcp-demo{
   display:grid;
   grid-template-rows:48px 1fr
@@ -732,6 +743,8 @@ button{color:inherit}
   .feature-essentials{grid-template-columns:1fr}
   .feature-essentials article{min-height:auto;border-right:0;border-bottom:1px solid var(--line);padding:26px 4px}
   .feature-essentials article:last-child{border-bottom:0}
+  .tool-pair{grid-template-columns:1fr;gap:14px}
+  .tool-pair-card{min-height:auto;padding:32px 24px}
   .demo-footer{grid-template-columns:1fr auto}
   .demo-footer code{display:none}
   .native-grid{grid-template-columns:1fr}

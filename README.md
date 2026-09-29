@@ -22,10 +22,14 @@ KelvinTerm combines:
 - Local SSH port forwarding
 - Reusable commands with parameters
 - Terminal recording and transcript export
+- Searchable Logs library with read-only ANSI replay (100 entries, or 200 in Settings)
 - On-demand DHCP for direct or isolated Ethernet links
+- On-demand TFTP on a selected adapter and folder, download-only by default
 - macOS Keychain-backed SSH passwords
 
 Requires **macOS 14 Sonoma or later**.
+
+The public repository contains only the website and downloadable `.dmg` releases. It does not contain the macOS app source code. Current builds are Apple Development signed but not notarized; macOS may require right-clicking the app and choosing **Open**. DHCP and TFTP share an administrator helper that can require approval on first use or after an update.
 
 ## GitHub Pages
 

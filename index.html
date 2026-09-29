@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#18191a" />
-  <meta name="description" content="KelvinTerm is a native macOS terminal workspace for network engineers — SSH, serial console, SFTP, port forwarding and direct-link DHCP in one focused app." />
+  <meta name="description" content="KelvinTerm brings SSH, USB console, SFTP, session Logs, DHCP and TFTP into one focused native macOS workspace for network engineers." />
   <meta property="og:title" content="KelvinTerm — The network engineer's terminal for macOS" />
-  <meta property="og:description" content="SSH, serial console, SFTP and direct-link network tools in one native macOS workspace." />
+  <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.3" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.5" />
 </head>
 <body>
   <header class="nav">
@@ -24,7 +24,7 @@
         <a href="#native">Native macOS</a>
         <a href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Releases</a>
       </nav>
-      <a class="nav-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.3/KelvinTerm-0.4.3.dmg">
+      <a class="nav-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
         Download
       </a>
     </div>
@@ -36,13 +36,13 @@
         <div class="eyebrow"><span></span> KelvinTerm for macOS</div>
         <h1>The network engineer’s <em>terminal workspace.</em></h1>
         <p>
-          SSH, USB serial console, SFTP, port forwarding and direct-link DHCP —
+          SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP —
           built into one focused native macOS app.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.3/KelvinTerm-0.4.3.dmg">
+          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.3</small>
+            <small class="release-version">v0.4.5</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -76,6 +76,7 @@
             <div class="side-row"><span>☆</span><b>Favorites</b><em>2</em></div>
             <div class="side-row"><span>◎</span><b>SSH</b><em>2</em></div>
             <div class="side-row"><span>↕</span><b>Console</b><em>1</em></div>
+            <div class="side-row"><span>▤</span><b>Logs</b><em>2</em></div>
 
             <div class="saved-head"><span>SAVED SESSIONS</span><span>⇅ &nbsp;＋</span></div>
             <div class="saved-session">
@@ -93,6 +94,7 @@
               <div class="tool-row accent"><span>↕</span><b>Quick Console</b></div>
               <div class="tool-row"><span>&lt;/&gt;</span><b>Local Terminal</b></div>
               <div class="tool-row"><span>◎</span><b>DHCP Server</b></div>
+              <div class="tool-row"><span>⇄</span><b>TFTP Server</b></div>
               <div class="auto-row"><span>Auto-connect on plug-in</span><span class="switch"></span></div>
               <div class="waiting"><i></i>Waiting for a console cable</div>
             </div>
@@ -171,6 +173,10 @@
         <span>Port Forwarding</span>
         <i></i>
         <span>DHCP</span>
+        <i></i>
+        <span>TFTP</span>
+        <i></i>
+        <span>Session Logs</span>
       </div>
     </section>
 
@@ -273,13 +279,30 @@
             </div>
           </div>
         </article>
+
+        <div class="tool-pair" aria-label="Transfer and review tools">
+          <article class="tool-pair-card">
+            <div class="feature-icon">⇄</div>
+            <div class="feature-number">03 / TFTP SERVER</div>
+            <h3>Move files on the isolated link.</h3>
+            <p>Choose an Ethernet adapter and a local folder. Devices can download from KelvinTerm on UDP 69; enable uploads only when you need them. New uploads never replace existing files.</p>
+            <span>Per-adapter · Download-only by default · Transfer history</span>
+          </article>
+          <article class="tool-pair-card">
+            <div class="feature-icon">▤</div>
+            <div class="feature-number">04 / SESSION LOGS</div>
+            <h3>Return to a recorded session.</h3>
+            <p>Recording saves the ANSI file you choose and keeps a private copy in Logs. Search past sessions and open one in a read-only terminal with its colors intact.</p>
+            <span>Searchable · Read-only replay · 100 or 200 entries</span>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="workflow" class="workflow-section section-shell">
       <div class="workflow-copy">
         <div class="section-kicker">A practical workflow</div>
-        <h2>Plug in. Discover. Configure. Connect.</h2>
+        <h2>Plug in. Give it an address. Configure. Connect.</h2>
         <p>
           KelvinTerm is designed around the point where a device is still on your desk,
           not yet in DNS, and sometimes not even on the network.
@@ -297,7 +320,11 @@
         </div>
         <div class="workflow-step">
           <span>03</span>
-          <div><b>Move into SSH.</b><p>Save the session, open SFTP, start a tunnel, or keep it in your recent workspace.</p></div>
+          <div><b>Move a configuration file.</b><p>Serve a file over TFTP on that link when the device needs it.</p></div>
+        </div>
+        <div class="workflow-step">
+          <span>04</span>
+          <div><b>Move into SSH.</b><p>Save the session, open SFTP, start a tunnel, or record the work for later review.</p></div>
         </div>
       </div>
     </section>
@@ -308,12 +335,12 @@
         <h2>Fast when you just need a prompt.</h2>
         <p>
           Local shell, SSH and serial sessions share the same focused terminal experience,
-          with search, recording, transcripts, font controls and a compact status bar.
+          with search, recording, a searchable Logs library, font controls and a compact status bar.
         </p>
         <ul>
           <li>Rename and reorder tabs</li>
           <li>Search terminal scrollback</li>
-          <li>Record sessions and export transcripts</li>
+          <li>Record sessions and replay them in the read-only Logs terminal</li>
           <li>Switch terminal themes and font size quickly</li>
         </ul>
       </div>
@@ -349,7 +376,7 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
         </div>
         <div>
           <b>Local workspace</b>
-          <p>Profiles, commands and workspace state are stored locally under your user Application Support directory.</p>
+          <p>Profiles, commands, workspace state and private recording copies stay under your user Application Support directory.</p>
         </div>
         <div>
           <b>No KelvinTerm account</b>
@@ -363,17 +390,17 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
         <div class="download-glow" aria-hidden="true"></div>
         <div class="section-kicker">KelvinTerm for macOS</div>
         <h2>Less tool-switching. More time on the network.</h2>
-        <p>Download KelvinTerm and keep SSH, console and direct-link utilities in one native workspace.</p>
+        <p>Download KelvinTerm and keep SSH, console, SFTP, Logs, DHCP and TFTP in one native workspace.</p>
         <div class="hero-actions">
-          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.3/KelvinTerm-0.4.3.dmg">
+          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.3</small>
+            <small class="release-version">v0.4.5</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
         <div class="release-detail" id="release-detail">Requires macOS 14 Sonoma or later.</div>
         <div class="install-note">
-          Current builds use Apple Development signing. On first launch, right-click KelvinTerm and choose <strong>Open</strong>.
+          Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
       </div>
     </section>
@@ -385,6 +412,6 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.3"></script>
+  <script src="./app.js?v=0.4.5"></script>
 </body>
 </html>

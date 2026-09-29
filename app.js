@@ -1,5 +1,5 @@
 const repo = "hydakyo/KelvinTerm";
-const fallbackDmg = "https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.3/KelvinTerm-0.4.3.dmg";
+const fallbackDmg = "https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg";
 
 async function hydrateLatestRelease() {
   try {

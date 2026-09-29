@@ -183,10 +183,6 @@ button{color:inherit}
   border:1px solid rgba(255,255,255,.08);background:#292b2d;
   color:#bfc2c5;font-size:9px
 }
-.tiny-square{
-  width:22px;height:22px;border-radius:5px;border:1px solid rgba(255,255,255,.08);
-  display:grid;place-items:center;color:#bfc2c5;font-size:10px
-}
 .search-box{
   margin:0 10px 14px;height:31px;border-radius:8px;
   display:flex;align-items:center;gap:8px;padding:0 9px;
@@ -283,7 +279,7 @@ button{color:inherit}
 .connect-card b{display:block;font-size:11px}
 .connect-card small{display:block;color:#999da1;font-size:9px;margin-top:3px}
 .connect-card em{font-style:normal;color:#999da1;font-size:16px}
-.recent-head{display:flex;justify-content:space-between;margin:28px 0 10px}
+.recent-head{display:flex;justify-content:space-between;margin:30px 0 10px}
 .recent-head span{font-weight:400;color:#999da1}
 .recent-row{
   height:58px;border-radius:9px;border:1px solid rgba(255,255,255,.08);

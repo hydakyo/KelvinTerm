@@ -161,7 +161,7 @@ button{color:inherit}
 .traffic-lights i:nth-child(3){background:#28c840}
 .chrome-title{color:#777d81;font-size:9px}
 .app-shell{height:620px;display:grid;grid-template-columns:225px 1fr}
-.app-sidebar{
+.app-sidebar{text-align:left;
   display:flex;flex-direction:column;
   background:#2a2e31;border-right:1px solid rgba(255,255,255,.055);
   min-width:0
@@ -248,9 +248,9 @@ button{color:inherit}
 .waiting{padding:3px 7px;color:#8f9498;font-size:8px}
 .waiting i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#8f9498;margin-right:6px}
 
-.app-main{background:#1e1e1f;min-width:0}
+.app-main{background:#1e1e1f;min-width:0;text-align:left}
 .app-topbar{
-  height:50px;padding:0 12px 0 18px;
+  height:50px;padding:0 18px;
   display:flex;align-items:center;justify-content:space-between;
   background:#2a2e31;border-bottom:1px solid rgba(255,255,255,.055)
 }
@@ -261,11 +261,11 @@ button{color:inherit}
 .toolbar{display:flex;align-items:center;gap:10px}
 .utility-group{display:flex;gap:10px;color:#bfc2c5;font-size:9.5px}
 .toolbar-divider{width:1px;height:18px;background:rgba(255,255,255,.055);margin:0 2px}
-.toolbar button{height:25px;border-radius:6px;padding:0 9px;font-size:9.5px;font-weight:650}
+.toolbar button{width:104px;height:30px;border-radius:6px;padding:0 9px;font-size:9.5px;font-weight:650}
 .toolbar-secondary{background:#4a4d4f;border:1px solid rgba(255,255,255,.11);color:#f0f1f2}
 .toolbar-primary{background:#a8435e;border:1px solid rgba(255,255,255,.1);color:#fff}
 .overview{height:calc(100% - 50px);overflow:hidden;background:#1e1e1f}
-.overview-inner{width:min(87%,870px);margin:0 auto;padding:37px 0}
+.overview-inner{width:auto;margin:0 18px;padding:28px 0}
 .overview h2{margin:0;color:#f0f1f2;font-size:25px;letter-spacing:-.035em}
 .overview-inner>p{margin:8px 0 27px;color:#bfc2c5;font-size:11.5px}
 .overview-label,.recent-head{color:#bfc2c5;font-size:10.5px;font-weight:650}
@@ -289,6 +289,9 @@ button{color:inherit}
 .type-dot{color:#8aabfc}
 .recent-row b{display:block;font-size:10.5px}
 .recent-row small{display:block;color:#999da1;font-size:9px;margin-top:2px}
+.group-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.group-card{grid-template-columns:27px 1fr 12px}
+.group-card .type-dot{color:var(--rose)}
 .recent-row time,.recent-row em{color:#999da1;font-size:8.5px;font-style:normal}
 .shortcut-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:23px;color:#999da1;font-size:8.5px}
 .shortcut-row span{display:flex;align-items:center;gap:5px}
@@ -726,7 +729,7 @@ button{color:inherit}
   .toolbar .utility-group{display:none}
   .toolbar-divider{display:none}
   .toolbar-secondary{display:none}
-  .overview-inner{width:90%}
+  .overview-inner{width:auto;margin:0 18px}
   .recent-row small{max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .shortcut-row span:nth-child(n+3){display:none}
   .capability-strip{overflow:hidden}

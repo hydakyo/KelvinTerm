@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.7" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.8" />
 </head>
 <body>
   <header class="nav">
@@ -42,7 +42,7 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.7</small>
+            <small class="release-version">v0.4.8</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -78,7 +78,7 @@
             <div class="side-row"><span>↕</span><b>Console</b><em>1</em></div>
             <div class="side-row"><span>▤</span><b>Logs</b><em>2</em></div>
 
-            <div class="saved-head"><span>SAVED SESSIONS</span><span>⇅ &nbsp;＋</span></div>
+            <div class="saved-head"><span>LATEST SESSIONS</span><span>⇅ &nbsp;＋</span></div>
             <div class="saved-session">
               <span class="type-tile ssh">◎</span>
               <div><b>Core Switch</b><small>core-switch.lab · 22</small></div>
@@ -119,10 +119,9 @@
 
             <div class="overview">
               <div class="overview-inner">
-                <h2>Connections</h2>
-                <p>Open a saved session or start a new connection.</p>
+                <h2>All sessions</h2>
+                <p>3 saved connections</p>
 
-                <div class="overview-label">New connection</div>
                 <div class="connect-grid">
                   <div class="connect-card">
                     <span>◎</span>
@@ -141,19 +140,16 @@
                   </div>
                 </div>
 
-                <div class="shortcut-row">
-                  <span><kbd>⌘N</kbd> New session</span>
-                  <span><kbd>⌘T</kbd> Local terminal</span>
-                  <span><kbd>⇧⌘C</kbd> Find console</span>
-                  <span><kbd>⌘⇧O</kbd> Quick open</span>
+                <div class="recent-head"><b>Groups</b><span>＋ New Group</span></div>
+                <div class="group-grid">
+                  <div class="recent-row group-card"><span class="type-dot">▱</span><div><b>Customer A</b><small>1 connection</small></div><em>›</em></div>
+                  <div class="recent-row group-card"><span class="type-dot">▱</span><div><b>Lab</b><small>1 connection</small></div><em>›</em></div>
                 </div>
-
-                <div class="recent-head"><b>Recent sessions</b><span>3 saved</span></div>
+                <div class="recent-head"><b>Ungrouped</b></div>
                 <div class="recent-row">
                   <span class="type-dot">◎</span>
-                  <div><b>Core Switch</b><small>operator@core-switch.lab · 22</small></div>
-                  <time>12m ago</time>
-                  <em>›</em>
+                  <div><b>Jump Host</b><small>operator@jump-host.lab · 22</small></div>
+                  <em>⋯</em>
                 </div>
               </div>
             </div>
@@ -292,7 +288,7 @@
             <div class="feature-icon">▤</div>
             <div class="feature-number">04 / SESSION LOGS</div>
             <h3>Return to a recorded session.</h3>
-            <p>Recording saves the ANSI file you choose and keeps a private copy in Logs. Search past sessions and open one in a read-only terminal with its colors intact.</p>
+            <p>Recording saves the ANSI file you choose and keeps a private copy in Logs. Search past sessions and open one in a read-only terminal with its colors intact. Resize the recording list to make more room for long names or terminal output; its width is remembered.</p>
             <span>Searchable · Read-only replay · 100 or 200 entries</span>
           </article>
         </div>
@@ -343,6 +339,7 @@
           <li>Rename and reorder tabs</li>
           <li>Search terminal scrollback</li>
           <li>Record sessions and replay them in the read-only Logs terminal</li>
+          <li>Organize connections into customer or system Groups and search sessions directly</li>
           <li>Switch terminal themes and font size quickly</li>
         </ul>
       </div>
@@ -402,12 +399,12 @@ Interface       IP-Address      Status     Protocol
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.7</small>
+            <small class="release-version">v0.4.8</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.7 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.7:</strong> detected consoles open as temporary sessions without adding unwanted saved profiles. Right-click a tab and choose Save Connection… to keep it. Saved console configurations are reused automatically.</p>
+        <div class="release-detail" id="release-detail">v0.4.8 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.8:</strong> browse saved connections by customer or system Group. Search shows matching sessions directly, cards have a quick actions menu, deletion asks for confirmation, and the Logs list can be resized. Detected consoles stay temporary until explicitly saved.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -421,6 +418,6 @@ Interface       IP-Address      Status     Protocol
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.7"></script>
+  <script src="./app.js?v=0.4.8"></script>
 </body>
 </html>

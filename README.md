@@ -27,11 +27,11 @@ KelvinTerm combines:
 - On-demand DHCP for direct or isolated Ethernet links
 - On-demand TFTP on a selected adapter and folder, download-only by default
 - Customer/system Groups with an inline selector and connection management menus
-- Direct session search and an independent Latest Sessions sidebar
+- Direct session search, 3 Latest Sessions and up to 20 Recent connections
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.8** — Group-based connection library, direct session search, card action menus, deletion confirmation, resizable Logs and aligned toolbar actions. Detected consoles remain temporary until explicitly saved.
+Latest release: **0.4.9** — simplified Workspace navigation, 3 Latest Sessions, up to 20 Recent connections, local shells starting in Home and a saved custom terminal text colour with a theme reset. Quick Console remains in Tools; ANSI and semantic highlighting keep their colours.
 
 Requires **macOS 14 Sonoma or later**.
 

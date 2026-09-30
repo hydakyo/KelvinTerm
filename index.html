@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.6" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.7" />
 </head>
 <body>
   <header class="nav">
@@ -42,7 +42,7 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.6</small>
+            <small class="release-version">v0.4.7</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -198,7 +198,7 @@
             <h3>From cable to console in seconds.</h3>
             <p>
               KelvinTerm watches for USB serial devices and can open the right port automatically.
-              When you need lower-level control, DTR, RTS and BREAK are already there.
+              Newly detected consoles stay temporary until you choose Save. Previously saved ports keep their configuration. When you need lower-level control, DTR, RTS and BREAK are already there.
             </p>
             <div class="feature-points">
               <span>Automatic USB discovery</span>
@@ -402,12 +402,12 @@ Interface       IP-Address      Status     Protocol
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.6</small>
+            <small class="release-version">v0.4.7</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.6 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.6:</strong> purposeful terminal text colors, highlighting that stays aligned while scrolling, more accurate search markers, and reliable IP → Username → Password navigation with Enter to connect.</p>
+        <div class="release-detail" id="release-detail">v0.4.7 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.7:</strong> detected consoles open as temporary sessions without adding unwanted saved profiles. Right-click a tab and choose Save Connection… to keep it. Saved console configurations are reused automatically.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -421,6 +421,6 @@ Interface       IP-Address      Status     Protocol
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.6"></script>
+  <script src="./app.js?v=0.4.7"></script>
 </body>
 </html>

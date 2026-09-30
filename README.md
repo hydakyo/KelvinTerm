@@ -28,7 +28,7 @@ KelvinTerm combines:
 - On-demand TFTP on a selected adapter and folder, download-only by default
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.6** — semantic text colors, scroll-aligned highlighting, accurate search markers and reliable connection-form keyboard navigation.
+Latest release: **0.4.7** — newly detected consoles remain temporary until explicitly saved; saved console configurations are reused automatically.
 
 Requires **macOS 14 Sonoma or later**.
 

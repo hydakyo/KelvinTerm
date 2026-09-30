@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.5" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.6" />
 </head>
 <body>
   <header class="nav">
@@ -24,7 +24,7 @@
         <a href="#native">Native macOS</a>
         <a href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Releases</a>
       </nav>
-      <a class="nav-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
+      <a class="nav-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
         Download
       </a>
     </div>
@@ -40,9 +40,9 @@
           built into one focused native macOS app.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
+          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.5</small>
+            <small class="release-version">v0.4.6</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -332,12 +332,14 @@
     <section class="terminal-story section-shell">
       <div class="terminal-story-copy">
         <div class="section-kicker">Still a terminal at heart</div>
-        <h2>Fast when you just need a prompt.</h2>
+        <h2>See the signal in your terminal.</h2>
         <p>
           Local shell, SSH and serial sessions share the same focused terminal experience,
-          with search, recording, a searchable Logs library, font controls and a compact status bar.
+          with restrained text highlighting, search, recording, a searchable Logs library and a compact status bar. Important addresses and operational states stand out while ordinary output stays quiet.
         </p>
         <ul>
+          <li>Read addresses in cyan, healthy states in green, warnings in amber and failures in coral</li>
+          <li>Keep existing ANSI colors and your terminal theme intact</li>
           <li>Rename and reorder tabs</li>
           <li>Search terminal scrollback</li>
           <li>Record sessions and replay them in the read-only Logs terminal</li>
@@ -350,9 +352,15 @@
           <span><i></i> Local Terminal</span>
           <div>⌕ &nbsp;&nbsp; ϟ Quick Commands⌄</div>
         </div>
-        <pre><code><span class="term-user">operator@lab-mac</span> <span class="term-path">/ %</span> ssh core-switch.lab
-<span class="term-muted">Last login: today from 192.0.2.10</span>
-core-switch# <span class="term-cursor">▋</span></code></pre>
+        <pre><code><span class="term-muted">core-switch#</span> show ip interface brief
+Interface       IP-Address      Status     Protocol
+<span class="term-interface">Vlan10</span>          <span class="term-address">192.0.2.10</span>      <span class="term-success">up</span>         <span class="term-success">up</span>
+<span class="term-interface">GigabitEthernet0/1</span>
+                unassigned      <span class="term-failure">down</span>       <span class="term-failure">down</span>
+<span class="term-interface">GigabitEthernet0/2</span>
+                unassigned      <span class="term-muted">administratively down</span>
+
+<span class="term-muted">core-switch#</span> <span class="term-cursor">▋</span></code></pre>
         <div class="terminal-bottom">
           <span>● Connected &nbsp;&nbsp; Local</span>
           <span>121×39 &nbsp;&nbsp; DRACULA &nbsp;&nbsp; 13 PT &nbsp;&nbsp; UTF-8</span>
@@ -392,13 +400,14 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
         <h2>Less tool-switching. More time on the network.</h2>
         <p>Download KelvinTerm and keep SSH, console, SFTP, Logs, DHCP and TFTP in one native workspace.</p>
         <div class="hero-actions">
-          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.5/KelvinTerm-0.4.5.dmg">
+          <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.5</small>
+            <small class="release-version">v0.4.6</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">Requires macOS 14 Sonoma or later.</div>
+        <div class="release-detail" id="release-detail">v0.4.6 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.6:</strong> purposeful terminal text colors, highlighting that stays aligned while scrolling, more accurate search markers, and reliable IP → Username → Password navigation with Enter to connect.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -412,6 +421,6 @@ core-switch# <span class="term-cursor">▋</span></code></pre>
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.5"></script>
+  <script src="./app.js?v=0.4.6"></script>
 </body>
 </html>

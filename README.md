@@ -10,7 +10,7 @@ This repository contains a dependency-free static landing page:
 - `styles.css`
 - `app.js`
 
-The download buttons query the GitHub Releases API at runtime and point to the latest `.dmg` asset automatically, with `/releases/latest` as a fallback.
+The download buttons query the GitHub Releases API at runtime and point to the latest `.dmg` asset automatically, with `/releases/latest/download/KelvinTerm.dmg` as a direct-download fallback. The installer is named **KelvinTerm.dmg**; its version is recorded in the app and release tag.
 
 ## Product
 
@@ -21,11 +21,14 @@ KelvinTerm combines:
 - SFTP browser and resumable transfers
 - Local SSH port forwarding
 - Reusable commands with parameters
+- Purposeful terminal text highlighting across local shell, SSH, serial and Logs
 - Terminal recording and transcript export
 - Searchable Logs library with read-only ANSI replay (100 entries, or 200 in Settings)
 - On-demand DHCP for direct or isolated Ethernet links
 - On-demand TFTP on a selected adapter and folder, download-only by default
 - macOS Keychain-backed SSH passwords
+
+Latest release: **0.4.6** — semantic text colors, scroll-aligned highlighting, accurate search markers and reliable connection-form keyboard navigation.
 
 Requires **macOS 14 Sonoma or later**.
 

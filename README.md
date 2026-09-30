@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.9** — simplified Workspace navigation, 3 Latest Sessions, up to 20 Recent connections, local shells starting in Home and a saved custom terminal text colour with a theme reset. Quick Console remains in Tools; ANSI and semantic highlighting keep their colours.
+Latest release: **0.4.10** — fixes saved SSH connection deletion when the macOS login keychain reports an ownership error. Includes the simplified Workspace sidebar, 3 Latest Sessions, up to 20 Recent connections, Home as the local shell starting folder and saved terminal text colours.
 
 Requires **macOS 14 Sonoma or later**.
 

@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.12" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.13" />
 </head>
 <body>
   <header class="nav">
@@ -42,7 +42,7 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.12</small>
+            <small class="release-version">v0.4.13</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -401,12 +401,12 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.12</small>
+            <small class="release-version">v0.4.13</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.12 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.12:</strong> clearer terminal highlights adapt to the actual terminal background, with a 7:1 contrast target across the built-in themes. IP addresses are cyan, interfaces blue, MAC addresses lavender, and supporting parameters warm sand. Errors, warnings and healthy states remain distinct. Numeric timeout settings stay plain, and existing ANSI colors are preserved. Includes the SSH host-key recovery, Keychain and Logs improvements from 0.4.11.</p>
+        <div class="release-detail" id="release-detail">v0.4.13 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.13:</strong> fixes automatic SSH host-key recovery when an unrelated line in known_hosts is malformed. KelvinTerm removes only entries for the affected host, preserves other lines and keeps a backup before reconnecting. Supports hashed hostnames and custom ports. Includes the clearer background-aware terminal highlights from 0.4.12. Automatic host-key replacement accepts the new key without independent verification.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -420,6 +420,6 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.12"></script>
+  <script src="./app.js?v=0.4.13"></script>
 </body>
 </html>

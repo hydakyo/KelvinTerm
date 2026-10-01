@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.12** — background-aware terminal highlighting with a 7:1 contrast target across built-in themes, distinct IP/interface/MAC colors, readable neutral states and corrected timeout-setting recognition. Existing ANSI colors are preserved. Includes the automatic changed SSH host-key recovery and reconnect policy from 0.4.11 (replacement keys are accepted without verification; a backup and retry limit are retained), corrected Keychain cleanup and recoverable Logs. macOS may still ask for Keychain access permission.
+Latest release: **0.4.13** — repairs automatic changed SSH host-key recovery when known_hosts contains malformed unrelated lines. Exact host lookup supports hashed entries and custom ports, preserves other lines and permissions, saves a complete .old backup and reconnects. Replacement keys are accepted without independent verification. Includes the background-aware 7:1 terminal highlights from 0.4.12 and previous Keychain/Logs improvements.
 
 Requires **macOS 14 Sonoma or later**.
 

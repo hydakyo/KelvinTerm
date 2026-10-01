@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.11" />
+  <link rel="stylesheet" href="./styles.css?v=0.4.12" />
 </head>
 <body>
   <header class="nav">
@@ -42,7 +42,7 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.11</small>
+            <small class="release-version">v0.4.12</small>
           </a>
           <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
         </div>
@@ -333,7 +333,8 @@
           with restrained text highlighting, search, recording, a searchable Logs library and a compact status bar. Important addresses and operational states stand out while ordinary output stays quiet.
         </p>
         <ul>
-          <li>Read addresses in cyan, healthy states in green, warnings in amber and failures in coral</li>
+          <li>Read addresses in cyan, interfaces in blue and MAC addresses in lavender</li>
+          <li>Background-aware contrast keeps healthy states, warnings and failures readable</li>
           <li>Keep existing ANSI colors and your terminal theme intact</li>
           <li>Rename and reorder tabs</li>
           <li>Search terminal scrollback</li>
@@ -348,15 +349,17 @@
           <span><i></i> Local Terminal</span>
           <div>⌕ &nbsp;&nbsp; ϟ Quick Commands⌄</div>
         </div>
-        <pre><code><span class="term-muted">core-switch#</span> show ip interface brief
+        <pre><code><span class="term-neutral">core-switch#</span> show ip interface brief
 Interface       IP-Address      Status     Protocol
 <span class="term-interface">Vlan10</span>          <span class="term-address">192.0.2.10</span>      <span class="term-success">up</span>         <span class="term-success">up</span>
 <span class="term-interface">GigabitEthernet0/1</span>
                 unassigned      <span class="term-failure">down</span>       <span class="term-failure">down</span>
 <span class="term-interface">GigabitEthernet0/2</span>
-                unassigned      <span class="term-muted">administratively down</span>
+                unassigned      <span class="term-neutral">administratively down</span>
+MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-support">VLAN 10</span>
+<span class="term-warning">warning: 33.3% packet loss</span>
 
-<span class="term-muted">core-switch#</span> <span class="term-cursor">▋</span></code></pre>
+<span class="term-neutral">core-switch#</span> <span class="term-cursor">▋</span></code></pre>
         <div class="terminal-bottom">
           <span>● Connected &nbsp;&nbsp; Local</span>
           <span>121×39 &nbsp;&nbsp; DRACULA &nbsp;&nbsp; 13 PT &nbsp;&nbsp; UTF-8</span>
@@ -398,12 +401,12 @@ Interface       IP-Address      Status     Protocol
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.11</small>
+            <small class="release-version">v0.4.12</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.11 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.11:</strong> automatically updates changed SSH host keys and reconnects, with a backup and one automatic recovery attempt. This accepts the replacement key without asking you to verify it. Keychain erase-all now handles each saved password correctly. Logs recover their index, support recording after data erasure, avoid mixed output when switching, and offer Load Entire Recording for long sessions. Recent connections no longer duplicate temporary and saved profiles.</p>
+        <div class="release-detail" id="release-detail">v0.4.12 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.12:</strong> clearer terminal highlights adapt to the actual terminal background, with a 7:1 contrast target across the built-in themes. IP addresses are cyan, interfaces blue, MAC addresses lavender, and supporting parameters warm sand. Errors, warnings and healthy states remain distinct. Numeric timeout settings stay plain, and existing ANSI colors are preserved. Includes the SSH host-key recovery, Keychain and Logs improvements from 0.4.11.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -417,6 +420,6 @@ Interface       IP-Address      Status     Protocol
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.11"></script>
+  <script src="./app.js?v=0.4.12"></script>
 </body>
 </html>

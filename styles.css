@@ -769,9 +769,13 @@ button{color:inherit}
   .terminal-visual pre{min-height:260px}
 }
 
-/* Semantic text colors match the dark terminal palette in KelvinTerm 0.4.6. */
-.term-address{color:#87c5cf}
-.term-interface{color:#a4b6d9}
-.term-success{color:#91c9a2}
-.term-warning{color:#e6bc7a}
-.term-failure{color:#ef8c89}
+/* Semantic text colors match the dark terminal palette in KelvinTerm 0.4.12. */
+.term-address{color:#8be9fd}
+.term-interface{color:#afcbff}
+.term-success{color:#a9e8b7}
+.term-warning{color:#f2cf82}
+.term-failure{color:#ffa0a0}
+
+.term-hardware{color:#d4b8ff}
+.term-support{color:#e4c9a5}
+.term-neutral{color:#f8f8f2}

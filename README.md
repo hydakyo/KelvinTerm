@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.10** — fixes saved SSH connection deletion when the macOS login keychain reports an ownership error. Includes the simplified Workspace sidebar, 3 Latest Sessions, up to 20 Recent connections, Home as the local shell starting folder and saved terminal text colours.
+Latest release: **0.4.11** — automatic changed SSH host-key recovery and reconnect (accepts replacement keys without verification, keeps a backup and limits automatic retry), corrected Keychain erase-all, recoverable Logs, full recording loading, safer replay switching and deduplicated connection history. macOS may still ask for Keychain access permission.
 
 Requires **macOS 14 Sonoma or later**.
 

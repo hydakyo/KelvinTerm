@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#18191a" />
-  <meta name="description" content="KelvinTerm brings SSH, USB console, SFTP, session Logs, DHCP and TFTP into one focused native macOS workspace for network engineers." />
-  <meta property="og:title" content="KelvinTerm — The network engineer's terminal for macOS" />
-  <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one native macOS workspace." />
+  <meta name="description" content="KelvinTerm brings SSH, USB console, SFTP, session Logs, DHCP and TFTP into one focused workspace for network engineers on macOS and Windows." />
+  <meta property="og:title" content="KelvinTerm — The network engineer's terminal for macOS and Windows" />
+  <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one workspace for macOS and Windows." />
   <meta property="og:type" content="website" />
-  <title>KelvinTerm — The network engineer's terminal for macOS</title>
-  <link rel="stylesheet" href="./styles.css?v=0.4.13" />
+  <title>KelvinTerm — The network engineer's terminal for macOS and Windows</title>
+  <link rel="stylesheet" href="./styles.css?v=windows-0.5.0" />
 </head>
 <body>
   <header class="nav">
@@ -22,9 +22,10 @@
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
         <a href="#native">Native macOS</a>
+        <a href="#windows">Windows</a>
         <a href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Releases</a>
       </nav>
-      <a class="nav-download download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
+      <a class="nav-download" href="#downloads">
         Download
       </a>
     </div>
@@ -33,27 +34,27 @@
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
-        <div class="eyebrow"><span></span> KelvinTerm for macOS</div>
+        <div class="eyebrow"><span></span> KelvinTerm for macOS &amp; Windows</div>
         <h1>The network engineer’s <em>terminal workspace.</em></h1>
         <p>
           SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP —
-          built into one focused native macOS app.
+          in a focused workspace. Native Swift on macOS, now also available for Windows.
         </p>
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
             <small class="release-version">v0.4.13</small>
           </a>
-          <a class="button button-secondary" href="#features">Explore KelvinTerm</a>
+          <a class="button button-secondary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.0/KelvinTerm-Setup-x64.exe"><span>Download for Windows</span><small>v0.5.0 · x64</small></a>
         </div>
         <div class="hero-meta">
           <span>macOS 14+</span>
-          <span>Native Swift</span>
+          <span>Windows x64</span>
           <span>Local-first</span>
         </div>
       </div>
 
-      <div class="product-shot" aria-label="KelvinTerm workspace preview">
+      <div class="product-shot" aria-label="KelvinTerm macOS workspace preview">
         <div class="window-chrome">
           <div class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></div>
           <div class="chrome-title">KelvinTerm</div>
@@ -392,7 +393,25 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
       </div>
     </section>
 
-    <section class="download-section section-shell">
+    <section id="windows" class="windows-section section-shell" aria-labelledby="windows-title">
+      <div class="windows-copy">
+        <div class="section-kicker">KelvinTerm for Windows · 0.5.0</div>
+        <h2 id="windows-title">Your workspace. Now on Windows.</h2>
+        <p>SSH, PowerShell through ConPTY, COM console, SFTP, tunnels, Groups and searchable Logs — with independent workspace and terminal themes.</p>
+        <div class="hero-actions">
+          <a class="button button-primary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.0/KelvinTerm-Setup-x64.exe"><span>Windows installer</span><small>x64 · .exe</small></a>
+          <a class="button button-secondary windows-portable-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.0/KelvinTerm-x64.zip">Portable ZIP</a>
+        </div>
+        <p class="windows-release-note">Packaged app tested on Windows x64: <strong>10 checks passed, 0 failed</strong>. <a href="https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.0">Release notes and checksums ↗</a></p>
+      </div>
+      <div class="windows-details">
+        <div><h3>Use your Windows tools</h3><p>PowerShell starts in your home directory. Discover COM ports and keep SSH credentials encrypted for your Windows account with DPAPI.</p></div>
+        <div><h3>Install or take it with you</h3><p>Use the per-user installer, or extract the complete portable ZIP. No separate Node.js or terminal installation is needed. This build is unsigned; Windows may display an unknown-publisher prompt.</p></div>
+        <div><h3>Know the platform details</h3><p>DHCP needs a physical adapter with a preconfigured static /24 IPv4 address. SFTP resume across app restarts is not yet included. Physical USB/LAN and installer lifecycle checks remain manual.</p></div>
+      </div>
+    </section>
+
+    <section id="downloads" class="download-section section-shell">
       <div class="download-card">
         <div class="download-glow" aria-hidden="true"></div>
         <div class="section-kicker">KelvinTerm for macOS</div>
@@ -416,10 +435,10 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
 
   <footer class="footer section-shell">
     <div class="brand footer-brand"><span class="brand-icon">&gt;_</span><span>KelvinTerm</span></div>
-    <span>Native macOS terminal workspace for network engineers.</span>
+    <span>Terminal workspace for macOS and Windows.</span>
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=0.4.13"></script>
+  <script src="./app.js?v=windows-0.5.0"></script>
 </body>
 </html>

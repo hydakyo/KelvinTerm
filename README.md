@@ -1,6 +1,6 @@
 # KelvinTerm
 
-Public release repository and product website for **KelvinTerm**, a native macOS terminal workspace for network engineers.
+Public release repository and product website for **KelvinTerm**, a terminal workspace for network engineers on macOS and Windows.
 
 ## Website
 
@@ -10,7 +10,7 @@ This repository contains a dependency-free static landing page:
 - `styles.css`
 - `app.js`
 
-The download buttons query the GitHub Releases API at runtime and point to the latest `.dmg` asset automatically, with `/releases/latest/download/KelvinTerm.dmg` as a direct-download fallback. The installer is named **KelvinTerm.dmg**; its version is recorded in the app and release tag.
+The download buttons query the GitHub Releases API at runtime and point to the latest `.dmg` asset automatically, with a pinned verified macOS DMG as a direct-download fallback. The installer is named **KelvinTerm.dmg**; its version is recorded in the app and release tag.
 
 ## Product
 
@@ -31,11 +31,11 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest release: **0.4.13** — repairs automatic changed SSH host-key recovery when known_hosts contains malformed unrelated lines. Exact host lookup supports hashed entries and custom ports, preserves other lines and permissions, saves a complete .old backup and reconnects. Replacement keys are accepted without independent verification. Includes the background-aware 7:1 terminal highlights from 0.4.12 and previous Keychain/Logs improvements.
+Latest macOS release: **0.4.13** — repairs automatic changed SSH host-key recovery when known_hosts contains malformed unrelated lines. Exact host lookup supports hashed entries and custom ports, preserves other lines and permissions, saves a complete .old backup and reconnects. Replacement keys are accepted without independent verification. Includes the background-aware 7:1 terminal highlights from 0.4.12 and previous Keychain/Logs improvements.
 
 Requires **macOS 14 Sonoma or later**.
 
-The public repository contains only the website and downloadable `.dmg` releases. It does not contain the macOS app source code. Current builds are Apple Development signed but not notarized; macOS may require right-clicking the app and choosing **Open**. DHCP and TFTP share an administrator helper that can require approval on first use or after an update.
+The public repository contains only the website and downloadable releases for each platform. It does not contain the macOS app source code. Current builds are Apple Development signed but not notarized; macOS may require right-clicking the app and choosing **Open**. DHCP and TFTP share an administrator helper that can require approval on first use or after an update.
 
 ## GitHub Pages
 
@@ -47,3 +47,18 @@ To publish this site from the repository root:
 4. Save.
 
 The private source code remains in the separate `KelvinTerm-source` repository.
+
+
+## Windows 0.5.0
+
+The Windows x64 release is published separately as `windows-v0.5.0`; its installer
+is `KelvinTerm-Setup-x64.exe`, with a portable `KelvinTerm-x64.zip`. Windows links
+are explicit and are not rewritten by the macOS release API hydration. The macOS
+latest release remains the `.dmg` release.
+
+The packaged application passed all 10 runtime checks on Windows x64 build
+10.0.26200, including ConPTY, DPAPI, COM discovery, recording/Logs, independent
+appearance, and loopback SSH/SFTP/tunnel/TFTP. Physical device/LAN behavior and
+installer lifecycle still need manual validation. The Windows build is unsigned.
+DHCP requires a preconfigured static /24 address; SFTP resume across restarts is
+not yet implemented on Windows.

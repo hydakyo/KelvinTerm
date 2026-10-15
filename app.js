@@ -1,5 +1,5 @@
 const repo = "hydakyo/KelvinTerm";
-const fallbackDmg = "https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg";
+const fallbackDmg = "https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.13/KelvinTerm.dmg";
 
 async function hydrateLatestRelease() {
   try {
@@ -13,7 +13,8 @@ async function hydrateLatestRelease() {
       ? release.assets.find(asset => /\.dmg$/i.test(asset.name || ""))
       : null;
 
-    const href = dmg?.browser_download_url || fallbackDmg;
+    if (!dmg) throw new Error("Latest release does not contain a macOS installer");
+    const href = dmg.browser_download_url;
     document.querySelectorAll(".download-link").forEach(link => {
       link.href = href;
       link.removeAttribute("target");

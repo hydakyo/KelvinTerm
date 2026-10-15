@@ -779,3 +779,15 @@ button{color:inherit}
 .term-hardware{color:#d4b8ff}
 .term-support{color:#e4c9a5}
 .term-neutral{color:#f8f8f2}
+
+/* Windows release: independent downloads keep the macOS installer selection intact. */
+.windows-section{display:grid;grid-template-columns:1.15fr 1fr;gap:72px;padding-top:90px;padding-bottom:90px;border-top:1px solid var(--line,rgba(255,255,255,.08))}
+.windows-copy h2{font-size:clamp(30px,3.3vw,46px);line-height:1.12;letter-spacing:-1.5px;margin:14px 0 20px}
+.windows-copy>p{max-width:540px;line-height:1.8;color:var(--text-2,#a5a8ac);font-size:14px}
+.windows-details{display:grid;gap:24px;align-content:center}
+.windows-details h3{font-size:14px;margin:0 0 7px}
+.windows-details p{font-size:12px;color:var(--text-2,#a5a8ac);line-height:1.8;margin:0}
+.windows-copy .hero-actions{justify-content:flex-start}
+.windows-copy .windows-release-note{font-size:11px;line-height:1.8;margin-top:20px}
+.windows-release-note a{color:var(--accent,#ed86a6);white-space:normal}
+@media(max-width:760px){.windows-section{grid-template-columns:1fr;gap:32px;padding-top:55px;padding-bottom:55px}.windows-copy .hero-actions{flex-wrap:wrap}.windows-copy .button{max-width:100%}}

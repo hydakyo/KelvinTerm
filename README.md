@@ -49,12 +49,16 @@ To publish this site from the repository root:
 The private source code remains in the separate `KelvinTerm-source` repository.
 
 
-## Windows 0.5.0
+## Windows 0.5.1
 
-The Windows x64 release is published separately as `windows-v0.5.0`; its installer
+The Windows x64 release is published separately as `windows-v0.5.1`; its installer
 is `KelvinTerm-Setup-x64.exe`, with a portable `KelvinTerm-x64.zip`. Windows links
 are explicit and are not rewritten by the macOS release API hydration. The macOS
 latest release remains the `.dmg` release.
+
+Version 0.5.1 introduces a modern Windows 11 Fluent 2 visual overhaul, featuring
+native Mica material, adaptive titleBarOverlay window controls, soft elevation shadows,
+rounded 12px cards, and Cascadia Code / JetBrains Mono typography.
 
 The packaged application passed all 10 runtime checks on Windows x64 build
 10.0.26200, including ConPTY, DPAPI, COM discovery, recording/Logs, independent

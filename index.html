@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one workspace for macOS and Windows." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS and Windows</title>
-  <link rel="stylesheet" href="./styles.css?v=windows-0.5.1" />
+  <link rel="stylesheet" href="./styles.css?v=windows-0.5.3" />
 </head>
 <body>
   <header class="nav">
@@ -43,9 +43,9 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.14</small>
+            <small class="release-version">v0.4.16</small>
           </a>
-          <a class="button button-secondary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.1/KelvinTerm-Setup-x64.exe"><span>Download for Windows</span><small>v0.5.1 · x64</small></a>
+          <a class="button button-secondary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.3/KelvinTerm-Setup-x64.exe"><span>Download for Windows</span><small>v0.5.3 · x64</small></a>
         </div>
         <div class="hero-meta">
           <span>macOS 14+</span>
@@ -395,14 +395,14 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
 
     <section id="windows" class="windows-section section-shell" aria-labelledby="windows-title">
       <div class="windows-copy">
-        <div class="section-kicker">KelvinTerm for Windows · 0.5.1</div>
+        <div class="section-kicker">KelvinTerm for Windows · 0.5.3</div>
         <h2 id="windows-title">Your workspace. Now on Windows.</h2>
-        <p>SSH, PowerShell through ConPTY, COM console, SFTP, tunnels, Groups and searchable Logs — with independent workspace and terminal themes.</p>
+        <p>An upgraded Windows workspace with searchable Logs, command import/export, session duplication, configurable layouts, SFTP file actions and port-forward management — alongside SSH, PowerShell and COM console.</p>
         <div class="hero-actions">
-          <a class="button button-primary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.1/KelvinTerm-Setup-x64.exe"><span>Windows installer</span><small>x64 · .exe</small></a>
-          <a class="button button-secondary windows-portable-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.1/KelvinTerm-x64.zip">Portable ZIP</a>
+          <a class="button button-primary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.3/KelvinTerm-Setup-x64.exe"><span>Windows installer</span><small>x64 · .exe</small></a>
+          <a class="button button-secondary windows-portable-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.3/KelvinTerm-x64.zip">Portable ZIP</a>
         </div>
-        <p class="windows-release-note">Packaged app tested on Windows x64: <strong>10 checks passed, 0 failed</strong>. <a href="https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.1">Release notes and checksums ↗</a></p>
+        <p class="windows-release-note"><strong>37 automated backend checks passed</strong>, plus UI and Electron recovery checks on macOS. Native Windows device testing remains separate. <a href="https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.3">Release notes and checksums ↗</a></p>
       </div>
       <div class="windows-details">
         <div><h3>Use your Windows tools</h3><p>PowerShell starts in your home directory. Discover COM ports and keep SSH credentials encrypted for your Windows account with DPAPI.</p></div>
@@ -420,12 +420,12 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.14</small>
+            <small class="release-version">v0.4.16</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.14 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.14:</strong> paste multiple lines as one editable block in supported shells. Line breaks and indentation stay intact, and commands wait for Enter. KelvinTerm warns before sending lines to shells that may execute them immediately.</p>
+        <div class="release-detail" id="release-detail">v0.4.16 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.16:</strong> faster local-shell rendering, reconnect without losing terminal history, nonblocking recording, safer data recovery and graceful shutdown. Multiline paste and semantic highlighting remain included.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -439,6 +439,6 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=macos-0.4.14"></script>
+  <script src="./app.js?v=macos-0.4.16"></script>
 </body>
 </html>

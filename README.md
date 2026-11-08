@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest macOS release: **0.4.14** — preserves multiline pastes as an editable block until Enter in supported shells. Includes safeguards for legacy shells and all existing SSH, Logs, and highlighting fixes.
+Latest macOS release: **0.4.16** — preserves multiline pastes as an editable block until Enter in supported shells. Includes safeguards for legacy shells and all existing SSH, Logs, and highlighting fixes.
 
 Requires **macOS 14 Sonoma or later**.
 
@@ -49,14 +49,14 @@ To publish this site from the repository root:
 The private source code remains in the separate `KelvinTerm-source` repository.
 
 
-## Windows 0.5.1
+## Windows 0.5.3
 
-The Windows x64 release is published separately as `windows-v0.5.1`; its installer
+The Windows x64 release is published separately as `windows-v0.5.3`; its installer
 is `KelvinTerm-Setup-x64.exe`, with a portable `KelvinTerm-x64.zip`. Windows links
 are explicit and are not rewritten by the macOS release API hydration. The macOS
 latest release remains the `.dmg` release.
 
-Version 0.5.1 introduces a modern Windows 11 Fluent 2 visual overhaul, featuring
+Version 0.5.3 introduces a modern Windows 11 Fluent 2 visual overhaul, featuring
 native Mica material, adaptive titleBarOverlay window controls, soft elevation shadows,
 rounded 12px cards, and Cascadia Code / JetBrains Mono typography.
 
@@ -66,3 +66,7 @@ appearance, and loopback SSH/SFTP/tunnel/TFTP. Physical device/LAN behavior and
 installer lifecycle still need manual validation. The Windows build is unsigned.
 DHCP requires a preconfigured static /24 address; SFTP resume across restarts is
 not yet implemented on Windows.
+
+## November 2026 stability updates
+
+macOS 0.4.16 adds faster local-shell rendering, history-preserving reconnect, bounded nonblocking recording, protected data recovery and asynchronous shutdown. Windows 0.5.3 adds expanded settings, command import/export, session duplication, SFTP file actions, tunnel management and renderer recovery. The Windows shared backend passed 37 tests on macOS; direct Windows hardware/installer validation is not claimed for this build. macOS remains Apple Development signed without notarization; Windows is unsigned.

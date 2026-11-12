@@ -48,25 +48,19 @@ To publish this site from the repository root:
 
 The private source code remains in the separate `KelvinTerm-source` repository.
 
+## Windows 0.5.4
 
-## Windows 0.5.3
+Download the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.4/KelvinTerm-Setup-x64.exe).
+Version 0.5.4 adds SSH host key confirmation, WebGL terminal rendering with a fallback,
+improved SFTP folder downloads and drag-and-drop uploads, and a compiled DHCP helper.
+The Windows CI runner passed 54 core tests, Electron runtime tests, and package
+integrity checks. The installer is unsigned and Windows may show a publisher warning. See the [Windows release and SHA-256 checksum](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.4).
 
-The Windows x64 release is published separately as `windows-v0.5.3`; its installer
-is `KelvinTerm-Setup-x64.exe`, with a portable `KelvinTerm-x64.zip`. Windows links
-are explicit and are not rewritten by the macOS release API hydration. The macOS
-latest release remains the `.dmg` release.
+Physical USB/LAN and installer lifecycle tests require a Windows device. DHCP requires
+a preconfigured static /24 address.
 
-Version 0.5.3 introduces a modern Windows 11 Fluent 2 visual overhaul, featuring
-native Mica material, adaptive titleBarOverlay window controls, soft elevation shadows,
-rounded 12px cards, and Cascadia Code / JetBrains Mono typography.
+## macOS 0.4.17
 
-The packaged application passed all 10 runtime checks on Windows x64 build
-10.0.26200, including ConPTY, DPAPI, COM discovery, recording/Logs, independent
-appearance, and loopback SSH/SFTP/tunnel/TFTP. Physical device/LAN behavior and
-installer lifecycle still need manual validation. The Windows build is unsigned.
-DHCP requires a preconfigured static /24 address; SFTP resume across restarts is
-not yet implemented on Windows.
-
-## November 2026 stability updates
-
-macOS 0.4.17 adds SSH host-key confirmation, private credential transport, improved terminal rendering and search, and a more compact workspace. Windows 0.5.3 adds expanded settings, command import/export, session duplication, SFTP file actions, tunnel management and renderer recovery. The Windows shared backend passed 37 tests on macOS; direct Windows hardware/installer validation is not claimed for this build. macOS remains Apple Development signed without notarization; Windows is unsigned.
+macOS 0.4.17 adds SSH host key confirmation, private credential transport,
+improved terminal rendering and search, and a more compact workspace.
+The app is signed with Apple Development and has no Apple notarization.

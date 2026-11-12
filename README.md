@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest macOS release: **0.4.16** — preserves multiline pastes as an editable block until Enter in supported shells. Includes safeguards for legacy shells and all existing SSH, Logs, and highlighting fixes.
+Latest macOS release: **0.4.17** — adds SSH host-key confirmation, improves terminal rendering and search, and consolidates the workspace controls.
 
 Requires **macOS 14 Sonoma or later**.
 
@@ -69,4 +69,4 @@ not yet implemented on Windows.
 
 ## November 2026 stability updates
 
-macOS 0.4.16 adds faster local-shell rendering, history-preserving reconnect, bounded nonblocking recording, protected data recovery and asynchronous shutdown. Windows 0.5.3 adds expanded settings, command import/export, session duplication, SFTP file actions, tunnel management and renderer recovery. The Windows shared backend passed 37 tests on macOS; direct Windows hardware/installer validation is not claimed for this build. macOS remains Apple Development signed without notarization; Windows is unsigned.
+macOS 0.4.17 adds SSH host-key confirmation, private credential transport, improved terminal rendering and search, and a more compact workspace. Windows 0.5.3 adds expanded settings, command import/export, session duplication, SFTP file actions, tunnel management and renderer recovery. The Windows shared backend passed 37 tests on macOS; direct Windows hardware/installer validation is not claimed for this build. macOS remains Apple Development signed without notarization; Windows is unsigned.

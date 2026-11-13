@@ -48,13 +48,14 @@ To publish this site from the repository root:
 
 The private source code remains in the separate `KelvinTerm-source` repository.
 
-## Windows 0.5.5
+## Windows 0.5.6
 
-Download the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.5/KelvinTerm-Setup-x64.exe).
-Version 0.5.5 improves terminal sizing and text contrast in live sessions and Logs
-replay, and avoids redundant resize events for local and SSH sessions.
-The Windows CI runner passed 56 core tests, Electron runtime tests, and package
-integrity checks. The installer is unsigned and Windows may show a publisher warning. See the [Windows release and SHA-256 checksum](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.5).
+Download the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.6/KelvinTerm-Setup-x64.exe).
+Version 0.5.6 fixes right-click Paste, SFTP tab switching, large recording playback,
+and DHCP/TFTP service controls. Re-enter and save SSH passwords stored by older
+builds so they can be tied to the correct SSH endpoint.
+The Windows CI runner passed 67 core tests, Electron runtime tests, and package
+integrity checks. The installer is unsigned and Windows may show a publisher warning. See the [Windows release and SHA-256 checksum](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.6).
 
 Physical USB/LAN and installer lifecycle tests require a Windows device. DHCP requires
 a preconfigured static /24 address.

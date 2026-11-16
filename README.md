@@ -10,7 +10,7 @@ This repository contains a dependency-free static landing page:
 - `styles.css`
 - `app.js`
 
-The download buttons query the GitHub Releases API at runtime and point to the latest `.dmg` asset automatically, with a pinned verified macOS DMG as a direct-download fallback. The installer is named **KelvinTerm.dmg**; its version is recorded in the app and release tag.
+The download buttons and signed update feeds point to the same verified GitHub Release assets. The installer is named **KelvinTerm.dmg**; its version is recorded in the app and release tag.
 
 ## Product
 
@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest macOS release **0.4.19** adds in-app updates.
+macOS and Windows support in-app updates.
 
 Requires **macOS 14 Sonoma or later**.
 
@@ -50,7 +50,7 @@ The private source code remains in the separate `KelvinTerm-source` repository.
 
 ## Windows 0.5.7
 
-Install with the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe). This release fixes right-click Copy, SSH tunnel shutdown, SFTP transfers, and session editing and import. The installer is unsigned and Windows may show a publisher warning. [Release notes and checksums](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.7).
+Install with the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe). The installer is unsigned and Windows may show a publisher warning. [Release notes and checksums](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.7).
 
 ## macOS 0.4.19
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>KelvinTerm for macOS</title><item><title>KelvinTerm 0.4.19</title><pubDate>Mon, 16 Nov 2026 06:23:21 +0000</pubDate><sparkle:version>4019</sparkle:version><sparkle:shortVersionString>0.4.19</sparkle:shortVersionString><sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion><enclosure url="https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.19/KelvinTerm.dmg" length="4062432" type="application/x-apple-diskimage" sparkle:edSignature="EQ5rU18PQNNjpgOddNlwNMw/kcAN4/AvKbbX1l7mIRuWFiDN/N5Q4tPWzJlh9adTcZWrhUoJyID3es/D3FaCAQ=="></enclosure></item></channel></rss><!-- sparkle-signatures:
+edSignature: H8ZKHUWq0fjnH/uiJA7OdHyLCIOiQBqziuwk+JocpSO6jmFvW/Fi2id/uC4rHOGNibT881BK5t5Ey3dVhX+5DA==
+length: 973
+-->

@@ -9,7 +9,7 @@
   <meta property="og:description" content="SSH, USB console, SFTP, searchable session Logs, DHCP and TFTP in one workspace for macOS and Windows." />
   <meta property="og:type" content="website" />
   <title>KelvinTerm — The network engineer's terminal for macOS and Windows</title>
-  <link rel="stylesheet" href="./styles.css?v=windows-0.5.6" />
+  <link rel="stylesheet" href="./styles.css?v=windows-0.5.7" />
 </head>
 <body>
   <header class="nav">
@@ -43,9 +43,9 @@
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.17</small>
+            <small class="release-version">v0.4.19</small>
           </a>
-          <a class="button button-secondary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.6/KelvinTerm-Setup-x64.exe"><span>Download for Windows</span><small>v0.5.6 · x64</small></a>
+          <a class="button button-secondary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe"><span>Download for Windows</span><small>v0.5.7 · x64</small></a>
         </div>
         <div class="hero-meta">
           <span>macOS 14+</span>
@@ -395,17 +395,17 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
 
     <section id="windows" class="windows-section section-shell" aria-labelledby="windows-title">
       <div class="windows-copy">
-        <div class="section-kicker">KelvinTerm for Windows · 0.5.6</div>
+        <div class="section-kicker">KelvinTerm for Windows · 0.5.7</div>
         <h2 id="windows-title">Your workspace. Now on Windows.</h2>
-        <p>Work with SSH, PowerShell and COM console in one workspace. Version 0.5.6 fixes right-click Paste, keeps SFTP actions on the active SSH session, and improves playback for large recordings.</p>
+        <p>Work with SSH, PowerShell and COM console in one workspace. Version 0.5.7 adds in-app updates and fixes right-click Copy, SSH tunnel shutdown, and SFTP transfers.</p>
         <div class="hero-actions">
-          <a class="button button-primary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.6/KelvinTerm-Setup-x64.exe"><span>Windows installer</span><small>x64 · .exe</small></a>
+          <a class="button button-primary windows-download-link" href="https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe"><span>Windows installer</span><small>x64 · .exe</small></a>
         </div>
-        <p class="windows-release-note"><strong>Windows x64 installer</strong>. Passed automated Windows and Electron checks. The installer is unsigned and Windows may show a publisher warning. <a href="https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.6">Release notes and checksums ↗</a></p>
+        <p class="windows-release-note"><strong>Windows x64 installer</strong>. The installer is unsigned and Windows may show a publisher warning. In-app updates verify the signed release manifest before installation. <a href="https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.7">Release notes and checksums ↗</a></p>
       </div>
       <div class="windows-details">
         <div><h3>Use your Windows tools</h3><p>PowerShell starts in your home directory. Discover COM ports and keep SSH credentials encrypted for your Windows account with DPAPI.</p></div>
-        <div><h3>Install on Windows</h3><p>Run the per-user installer. It includes everything KelvinTerm needs to start.</p></div>
+        <div><h3>Install on Windows</h3><p>Run the per-user installer once. When a new version is available, click Update in KelvinTerm to install it and reopen the app.</p></div>
         <div><h3>Know the platform details</h3><p>DHCP needs a physical adapter with a preconfigured static /24 IPv4 address. SFTP resume across app restarts is not yet included. Physical USB/LAN and installer lifecycle checks remain manual.</p></div>
       </div>
     </section>
@@ -419,12 +419,12 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
         <div class="hero-actions">
           <a class="button button-primary download-link" href="https://github.com/hydakyo/KelvinTerm/releases/latest/download/KelvinTerm.dmg">
             <span>Download for macOS</span>
-            <small class="release-version">v0.4.17</small>
+            <small class="release-version">v0.4.19</small>
           </a>
           <a class="button button-secondary" href="https://github.com/hydakyo/KelvinTerm/releases" target="_blank" rel="noreferrer">Release notes</a>
         </div>
-        <div class="release-detail" id="release-detail">v0.4.17 · Requires macOS 14 Sonoma or later.</div>
-        <p class="install-note"><strong>New in 0.4.17:</strong> SSH host-key confirmation, private credential transport, improved terminal rendering and search, and a more compact workspace with background DHCP/TFTP controls.</p>
+        <div class="release-detail" id="release-detail">v0.4.19 · Requires macOS 14 Sonoma or later.</div>
+        <p class="install-note"><strong>New in 0.4.19:</strong> Copy KelvinTerm to Applications once. When a new version is available, click Update in KelvinTerm to install it and reopen the app.</p>
         <div class="install-note">
           Current builds use Apple Development signing and are not notarized. On first launch, macOS may ask you to right-click KelvinTerm and choose <strong>Open</strong>. DHCP and TFTP use a shared helper that can require one administrator approval on first use or after an update.
         </div>
@@ -438,6 +438,6 @@ MAC <span class="term-hardware">4e16.c500.072d</span> · <span class="term-suppo
     <span>© <span id="year"></span></span>
   </footer>
 
-  <script src="./app.js?v=macos-0.4.17"></script>
+  <script src="./app.js?v=macos-0.4.19"></script>
 </body>
 </html>

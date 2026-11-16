@@ -1,0 +1,8 @@
+version: "0.5.7"
+files:
+  - url: "https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe"
+    sha512: "lOYzNXpu/ZMifX/g0yZ9fwi1SRy7g0hhVh4NSDwf4vfQAmpkC9tZFfZOPl3A2DJyNO94d8cqH90DhhkbU17u0w=="
+    size: 116954499
+path: "https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe"
+sha512: "lOYzNXpu/ZMifX/g0yZ9fwi1SRy7g0hhVh4NSDwf4vfQAmpkC9tZFfZOPl3A2DJyNO94d8cqH90DhhkbU17u0w=="
+releaseDate: "2026-11-16T06:27:17.831904+00:00"

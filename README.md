@@ -31,7 +31,7 @@ KelvinTerm combines:
 - Resizable Logs list with remembered width and deletion confirmation
 - macOS Keychain-backed SSH passwords
 
-Latest macOS release: **0.4.17** — adds SSH host-key confirmation, improves terminal rendering and search, and consolidates the workspace controls.
+Latest macOS release **0.4.19** adds in-app updates.
 
 Requires **macOS 14 Sonoma or later**.
 
@@ -48,20 +48,16 @@ To publish this site from the repository root:
 
 The private source code remains in the separate `KelvinTerm-source` repository.
 
-## Windows 0.5.6
+## Windows 0.5.7
 
-Download the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.6/KelvinTerm-Setup-x64.exe).
-Version 0.5.6 fixes right-click Paste, SFTP tab switching, large recording playback,
-and DHCP/TFTP service controls. Re-enter and save SSH passwords stored by older
-builds so they can be tied to the correct SSH endpoint.
-The Windows CI runner passed 67 core tests, Electron runtime tests, and package
-integrity checks. The installer is unsigned and Windows may show a publisher warning. See the [Windows release and SHA-256 checksum](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.6).
+Install with the [Windows x64 installer](https://github.com/hydakyo/KelvinTerm/releases/download/windows-v0.5.7/KelvinTerm-Setup-x64.exe). This release fixes right-click Copy, SSH tunnel shutdown, SFTP transfers, and session editing and import. The installer is unsigned and Windows may show a publisher warning. [Release notes and checksums](https://github.com/hydakyo/KelvinTerm/releases/tag/windows-v0.5.7).
 
-Physical USB/LAN and installer lifecycle tests require a Windows device. DHCP requires
-a preconfigured static /24 address.
+## macOS 0.4.19
 
-## macOS 0.4.17
+Copy KelvinTerm into Applications from the [macOS disk image](https://github.com/hydakyo/KelvinTerm/releases/download/v0.4.19/KelvinTerm.dmg). The app is signed with Apple Development and has no Apple notarization. [Release notes and checksum](https://github.com/hydakyo/KelvinTerm/releases/tag/v0.4.19).
 
-macOS 0.4.17 adds SSH host key confirmation, private credential transport,
-improved terminal rendering and search, and a more compact workspace.
-The app is signed with Apple Development and has no Apple notarization.
+## In-app updates
+
+Install the first version with the updater manually. For future releases, click **Update** in the top bar to download, install, and reopen KelvinTerm. The app confirms first if a restart would interrupt active work.
+
+GitHub Pages serves the [macOS update feed](updates/macos/appcast.xml) and [Windows update metadata](updates/windows/latest.yml). Both point to separately versioned GitHub Release assets.
